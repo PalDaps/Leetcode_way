@@ -24,7 +24,7 @@
     <ProjectGuid>{25a84b41-0429-4d9f-8654-fc3501d210db}</ProjectGuid>
     <RootNamespace>Leetcodeway</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>Leetcode_1480</ProjectName>
+    <ProjectName>Leetcode_way_1480</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
