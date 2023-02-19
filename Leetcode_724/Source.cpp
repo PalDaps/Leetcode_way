@@ -36,16 +36,16 @@ public:
 			sum_right_last = nums[j] + sum_right_last; 
 		}
 	
-		if (count == 0 && sum_left_one != 0 && sum_right_last != 0) return a;
-		else if (count >= 1) return safe_i;
-		else if (sum_left_one == 0 && count == 0 ) return b;
-		else if (sum_right_last == 0 && count == 0 ) return nums.size() - 1;
+	if (count == 0 && sum_left_one != 0 && sum_right_last != 0 ) return a;
+	else if (sum_left_one == 0 ) return b;
+	else if (sum_right_last == 0) return nums.size() -1;
+	else return safe_i;
 	}
 };
 
 int main()
 {
-	std::vector<int> nums = { -1,-1,1,1,0,0 };
+	std::vector<int> nums = { -1,-1,0,0,-1,-1 };
 	solution processing;
 	std::cout << processing.pivotIndex(nums);
 	return 0;
