@@ -8,9 +8,10 @@ public:
 	{
 		int sum_left = 0, sum_right = 0, count = 0, safe_i = 0, pivot = 0;
 		int sum_left_one = 0, sum_right_last = 0;
-		for (int i = 0; i < nums.size(); i++) // the sum of all left elem
+		int a = -1, b = 0;
+		for (int i = 0; i < nums.size(); i++) 
 		{
-			for (int k = 0; k < i+1; k++)
+			for (int k = 0; k < i+1; k++) // the sum of all left elem
 			{
 				sum_left = nums[k] + sum_left;
 			}
@@ -18,31 +19,33 @@ public:
 			{
 				sum_right = nums[j] + sum_right;
 			}
-			for (int j = 1; j < nums.size(); ++j)
-			{
-				sum_left_one = nums[j] + sum_left_one;
-			}
-			for (int j = 0; j < nums.size() - 1; ++j)
-			{
-				sum_right_last = nums[j] + sum_right_last;
-			}
-			if (sum_left == sum_right)
+			if (sum_left == sum_right && sum_left !=0 )
 			{
 				count++;
-				safe_i = i + 1;
+				if ( count == 1 ) safe_i = i + 1;
 			}
 			sum_left = 0;
 			sum_right = 0;
 		}
-		if (count == 0) return -1;
-		else if (sum_left_one == 0 || sum_right_last) return 0;
-		else return safe_i;
+		for (int j = 1; j < nums.size(); ++j) // [0] == sum(0) ?
+		{
+			sum_left_one = nums[j] + sum_left_one;
+		}
+		for (int j = 0; j < nums.size() - 1; ++j) // sum(0) == [nums.size()] ?
+		{
+			sum_right_last = nums[j] + sum_right_last; 
+		}
+	
+		if (count == 0 && sum_left_one != 0 && sum_right_last != 0) return a;
+		else if (count >= 1) return safe_i;
+		else if (sum_left_one == 0 && count == 0 ) return b;
+		else if (sum_right_last == 0 && count == 0 ) return nums.size() - 1;
 	}
 };
 
 int main()
 {
-	std::vector<int> nums = { 1, 2, 4, 2, 7, 9 };
+	std::vector<int> nums = { -1,-1,1,1,0,0 };
 	solution processing;
 	std::cout << processing.pivotIndex(nums);
 	return 0;
