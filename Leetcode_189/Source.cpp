@@ -6,17 +6,26 @@ class Solution
 public:
 	void rotate(std::vector<int>& nums, int k)
 	{
-		int size_of_nums = size(nums);
-		int index_of_last = size(nums)-1;
-		for ( int j = 0; j < k; j++ )
+		int size_start = size(nums);
+		int o = k % size(nums);
+		if ( o <= size(nums)-o )
+		{ 
+		for (int i = 0; i < o; i++)
 		{
-			for (int i = index_of_last; i >= 1; i--)
-			{
-				int temp = nums[(i+1) % size_of_nums];
-				nums[(i + 1) % size_of_nums] = nums[i % size_of_nums];
-				nums[i % size_of_nums] = temp;
-			}
+			nums.insert(nums.begin(), nums[size(nums) - 1 - i]);
 		}
+		nums.erase(nums.end() - o, nums.end());
+		}
+		else
+		{
+			for (int i = 0; i < size_start-o; i++)
+			{
+				nums.push_back(nums[i]);
+			}
+			nums.erase(nums.begin(), nums.begin()+(size_start - o));
+		}
+		for (auto i : nums)
+			std::cout << i << " ";
 	}
 };
 
