@@ -7,52 +7,40 @@ class Solution
 public:
 	std::vector<int> twoSum(std::vector<int>& nums, int target)
 	{
+		int p = 0;
+		std::vector<int> numsMinus;
 		std::vector<int> sum;
-		int delta = 0;
-		int safe_first_i;
-		int safe_second_i;
-		std::sort(nums.begin(), nums.end()); 
-		for (int i = 0; i < nums.size()-1; i++)
+		for (int i = 0; i < nums.size() - 1; i++)
 		{
-			if ( nums[i] < target )
-			{
-				safe_first_i = i;
-				delta = target - nums[i];
-				int left= 0;
-				int right = nums.size()-1;
-				int index_middle = (left + right) / 2;
-				while (left < right)
-				{
-					if (nums[index_middle] == delta)
-					{
-						sum.push_back(index_middle);
-						sum.push_back(safe_first_i);
-						break;
-					}
-					else if (delta > nums[index_middle] )
-					{
-						left = index_middle + 1;
-					}
-					else
-					{
-						right = index_middle - 1;
-					}
-					index_middle = (left + right) / 2;
-				}
-			}
-			break;
+			int temp;
+			temp = target - nums[i];
+			numsMinus.push_back(temp);
 		}
-		for (auto i : sum)
-			std::cout << i << " ";
-		return sum;
+		for (int i = 0; i < nums.size(); i++)
+		{
+			    for (int j = 0; j < nums.size(); j++)
+			    {
+			    	if (numsMinus[i] == nums[j] && i != j)
+			    	{
+						p++;
+			    		sum.push_back(i);
+			    		sum.push_back(j);
+						return sum;
+			    	}
+			    }
+		}
+		numsMinus = { 0, 0 };
+		return numsMinus;
 	}
 };
 
 int main()
 {
 	int target = 6;
-	std::vector<int> anime = { 1, 2, 2, 2, 2, 2 };
+	std::vector<int> anime = { -1,-2,-3,-4,-5 };
 	Solution daun;
-	daun.twoSum(anime, 2);
+	std::vector<int> hi = daun.twoSum(anime, -8);
+	for (auto i : hi)
+		std::cout << i << " ";
 	return 0;
 }
