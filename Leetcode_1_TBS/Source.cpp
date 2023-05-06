@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 #include <unordered_map>
+
+
 class Solution
 {
 public:
@@ -21,11 +23,13 @@ public:
 		}
 		return {};
 	}
-	
-
 };
 
 int main()
 {
+	Solution daps;
+	std::vector<int> a = { 1, 2, 6, 5, 4, 1, 4, 2 };
+	for ( auto i : daps.twoSum(a, 11))
+		std::cout << i << " ";
 	return 0;
 }
