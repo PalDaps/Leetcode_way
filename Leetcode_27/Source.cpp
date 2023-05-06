@@ -6,33 +6,29 @@ class Solution
 public:
 	int removeElement(std::vector<int>& nums, int val)
 	{
-		std::vector<int> indexes;
+		std::vector<int> nums_new;
 		int counter = 0;
 		for (int i = 0; i < nums.size(); i++)
 		{
 			if (nums[i] == val)
 			{
-
 				counter++;
-				indexes.push_back(i);
-			}
-		}
-
-		for (int i = 0; i < nums.size(); i++)
-		{
-
-		}
-
-		std::cout << nums.size() - counter << ", nums = [";
-		int j = 0;
-		for (int i = 0; i < nums.size() - 1; i++)
-		{
-			if (i == indexes[j])
-			{
-				j++;
 			}
 			else
-				std::cout << nums[i] << ", ";
+				nums_new.push_back(nums[i]);
+		}
+		for (int i = 0; i < nums_new.size(); i++)
+		{
+			nums[i] = nums_new[i];
+		}
+		for (int i = nums_new.size(); i < nums.size(); i++)
+		{
+			nums[i] = 0;
+		}
+		std::cout << nums.size() - counter << ", nums = [";
+		for (int i = 0; i < nums_new.size(); i++)
+		{
+			std::cout << nums[i] << ", ";
 		}
 		for (int i = 0; i < counter - 1; i++)
 		{
