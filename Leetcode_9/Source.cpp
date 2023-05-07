@@ -70,8 +70,7 @@ public:
 			y /= 10;
 			c--;
 		}
-		if (number == x) return true;
-		else return false;
+	    return number == x;
 	}
 
 };
