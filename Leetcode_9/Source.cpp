@@ -7,7 +7,11 @@ class Solution
 public:
 	bool isPalindrom(int x)
 	{
-		std::vector<int> numbers;
+		int p = 1;
+		int c = 1;
+		int number = 0;
+		int y = x;
+		/* std::vector<int> numbers;
 		int c = 0;
 		int n = 1;
 		int ost_one = 10;
@@ -54,6 +58,19 @@ public:
 		// std::cout << counter - 1 << std::endl;
 		// std::cout << c << std::endl;
 		if (c == numbers.size() / 2 && x > 0) return true;
+		else return false;
+		*/
+		while (p != 0)
+		{
+			p = y / (pow(10, ++c));
+		}
+		while (c != 0)
+		{
+			number = y % 10 * pow(10, c-1) + number;
+			y /= 10;
+			c--;
+		}
+		if (number == x) return true;
 		else return false;
 	}
 
