@@ -7,23 +7,26 @@ class Solution
 public:
 	std::string longestCoommonPrefix(std::vector<std::string>& strs)
 	{
-		int counter = 0;
-		int min_size = 0;
 		std::string first = strs[0];
 		std::string safe_word = "";
+		if (strs.size() == 1) return strs[0];
+		int counter = std::min(first.size(), strs[1].size());;
+		int min_size = counter;
 		for (int i = 1; i < strs.size(); i++)
-		{
-			if ( i == 1 ) 
-				min_size = std::min(first.size(), strs[i].size());
+		{		
+			counter = 0;
 			for (int j = 0; j < min_size; j++)
 			{
 				if (first[j] == strs[i][j])
 				{
 					counter++;
 				}
+				else
+				{
+					break;
+				}
 			}
 			min_size = counter;
-			counter = 0;
 		}
 		for (int i = 0; i < min_size; i++)
 		{
@@ -35,7 +38,7 @@ public:
 
 int main()
 {
-	std::vector<std::string> words = { "a","a","car" };
+	std::vector<std::string> words = {"cir", "car"};
 	// std::cout << words[1] << std::endl;
 	// std::cout << words[1].size() << std::endl;
 	// for (int i = 0; i < words[1].size(); i++)
