@@ -1,5 +1,6 @@
 #include <iostream>
-
+#include <vector>
+/*
 class Solution
 {
 public:
@@ -134,7 +135,10 @@ public:
 		return 0;
 	}
 };
-/*public:
+*/
+class Solution
+{
+public:
 	bool isValid(std::string s)
 	{
 		if (s.size() % 2 != 0) return false;
@@ -142,25 +146,44 @@ public:
 		int dist_two = 777;
 		int dist_three = 777;
 		int counter = 0;
-		int counter_find_one = 0;
+		int counter_of_duplicate = 0;
 		int counter_find_two = 0;
 		int counter_find_three = 0;
+		std::vector<int> okey;
 		for (int i = 0; i < s.size(); i++)
 		{
 			switch (s[i])
 			{
 			case '{':
 			{
-				for (int j = i+1; j < s.size(); j++)
+				for (int j = i + 1; j < s.size(); j++)
 				{
-					if (s[j] == '}')
+
+					if (s[j] == '{')
 					{
-						dist_one = counter;
+						counter_of_duplicate++;
+						counter++;
+					}
+					else if (s[j] == '}')
+					{
+						if (counter_of_duplicate == 0)
+						{
+							dist_one = counter;
+							if (dist_one % 2 == 0)
+							{
+								// != 0 std::cout << dist_one;
+								okey.push_back(dist_one);
+								dist_one = 0;
+								continue;
+								// return 0;
+							}
+						}
+						counter++;
+						if (counter_of_duplicate >= 1) counter_of_duplicate--;
 					}
 					else
 					{
 						counter++;
-						counter_find_one++;
 					}
 				}
 				counter = 0;
@@ -170,16 +193,32 @@ public:
 			{
 				for (int j = i + 1; j < s.size(); j++)
 				{
-					if (s[j] == ']')
+					if (s[j] == '[')
 					{
-						dist_two = counter;
+						counter_of_duplicate++;
+						counter++;
+					}
+					else if (s[j] == ']')
+					{
+						if (counter_of_duplicate == 0)
+						{
+							dist_two = counter;
+							if (dist_two % 2 == 0)
+							{
+								// != 0 std::cout << dist_one;
+								okey.push_back(dist_two);
+								dist_two = 0;
+								continue;
+								// return 0;
+							}
+						}
+						counter++;
+						if ( counter_of_duplicate>= 1 ) counter_of_duplicate--;
 					}
 					else
 					{
 						counter++;
-						counter_find_two++;
 					}
-
 				}
 				counter = 0;
 				break;
@@ -188,20 +227,37 @@ public:
 			{
 				for (int j = i + 1; j < s.size(); j++)
 				{
-					if (s[j] == ')')
+					if (s[j] == '(')
 					{
-						dist_three = counter;
+						counter_of_duplicate++;
+						counter++;
+					}
+					else if (s[j] == ')')
+					{
+						if (counter_of_duplicate == 0)
+						{
+							dist_three = counter;
+							if (dist_three % 2 == 0)
+							{ 
+								// != 0 std::cout << dist_one;
+								okey.push_back(dist_three);
+								dist_three = 0;
+								continue;
+								// return 0;
+							}
+						}
+						counter++;
+						if (counter_of_duplicate >= 1) counter_of_duplicate--;
 					}
 					else
 					{
 						counter++;
-						counter_find_three++;
 					}
 				}
 				counter = 0;
 				break;
 			}
-			/* case '}':
+			/*case '}':
 			{
 				break;
 			}
@@ -213,23 +269,30 @@ public:
 			{
 				break;
 			}
-			
-			}
 
+			}
+			*/
+
+			}
+			// std::cout << dist_one << std::endl << dist_two << std::endl << dist_three << std::endl;
+			// std::cout << counter_find_one << std::endl << counter_find_two << std::endl << counter_find_three << std::endl;
+			// if (dist_one % 2 == 0 && dist_two % 2 == 0 && dist_three % 2 == 0) return true;
 		}
-		// std::cout << dist_one << std::endl << dist_two << std::endl << dist_three << std::endl;
-		// std::cout << counter_find_one << std::endl << counter_find_two << std::endl << counter_find_three << std::endl;
-		// if (dist_one % 2 == 0 && dist_two % 2 == 0 && dist_three % 2 == 0) return true;
+		for (auto i : okey)
+			std::cout << i << " ";
 		if (((dist_one % 2) * (dist_two % 2) * (dist_three % 2)) == 0) return true;
 		else return false;
+
 	}
-};*/;
+};
+
 
 
 int main()
 {
-	std::string brackets = "[({}[])]";
+	std::string brackets = "{({(())}{()})}";
+	std::string brackets_ = "(())()";
 	Solution daps;
-	std::cout << daps.isValid(brackets);
+	daps.isValid(brackets);
 	return 0;
 }
