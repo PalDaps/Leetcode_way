@@ -160,30 +160,32 @@ public:
 			case '{':
 			{
 				invertor_one++;
+				if (s[i+1] == ']' || s[i+1] == ')') return false;
 				for (int j = i + 1; j < s.size(); j++)
 				{
-
 					if (s[j] == '{')
 					{
 						counter_of_duplicate++;
 						counter++;
-						invertor_one++;
+						// invertor_one++;
 					}
 					else if (s[j] == '}')
 					{
-						invertor_one--;
+						// invertor_one--;
 						if (counter_of_duplicate == 0)
 						{
 							dist_one = counter;
-							if (dist_one % 2 == 0)
+							if (dist_one % 2 != 0)
 							{
 								// != 0 std::cout << dist_one;
-								okey.push_back(dist_one);
-								dist_one = 0;
-								j = s.size();
-								continue;
-								// return 0;
+								// okey.push_back(dist_one);
+								// dist_one = 0;
+								// j = s.size();
+								// continue;
+								return 0;
 							}
+							dist_one = 0;
+							j = s.size();
 						}
 						counter++;
 						if (counter_of_duplicate >= 1) counter_of_duplicate--;
@@ -199,29 +201,32 @@ public:
 			case '[':
 			{
 				invertor_two++;
+				if (s[i+1] == '}' || s[i+1] == ')') return false;
 				for (int j = i + 1; j < s.size(); j++)
 				{
 					if (s[j] == '[')
 					{
-						invertor_two++;
+						// invertor_two++;
 						counter_of_duplicate++;
 						counter++;
 					}
 					else if (s[j] == ']')
 					{
-						invertor_two--;
+						// invertor_two--;
 						if (counter_of_duplicate == 0)
 						{
 							dist_two = counter;
-							if (dist_two % 2 == 0)
+							if (dist_two % 2 != 0)
 							{
 								// != 0 std::cout << dist_one;
-								okey.push_back(dist_two);
-								dist_two = 0;
-								j = s.size();
-								continue;
-								// return 0;
+								// okey.push_back(dist_two);
+								// dist_two = 0;
+								// j = s.size();
+								// continue;
+								return 0;
 							}
+							dist_two = 0;
+							j = s.size();
 						}
 						counter++;
 						if (counter_of_duplicate >= 1) counter_of_duplicate--;
@@ -237,29 +242,32 @@ public:
 			case '(':
 			{
 				invertor_three++;
+				if (s[i+1] == '}' || s[i+1] == ']') return false;
 				for (int j = i + 1; j < s.size(); j++)
 				{
 					if (s[j] == '(')
 					{
-						invertor_three++;
+						// invertor_three++;
 						counter_of_duplicate++;
 						counter++;
 					}
 					else if (s[j] == ')')
 					{
-						invertor_three--;
+						// invertor_three--;
 						if (counter_of_duplicate == 0)
 						{
 							dist_three = counter;
-							if (dist_three % 2 == 0)
+							if (dist_three % 2 != 0)
 							{
 								// != 0 std::cout << dist_one;
-								okey.push_back(dist_three);
-								dist_three = 0;
-								j = s.size();
-								continue;
-								// return 0;
+								// okey.push_back(dist_three);
+								// dist_three = 0;
+								// j = s.size();
+								// continue;
+								return 0;
 							}
+							dist_three = 0;
+							j = s.size();
 						}
 						counter++;
 						if (counter_of_duplicate >= 1) counter_of_duplicate--;
@@ -274,18 +282,21 @@ public:
 			}
 			case '}':
 			{
+				// if ( s.size() != 2 ) 
 				invertor_one--;
-				if (invertor_one < 0) return 0;
+			    if (invertor_one < 0) return 0;
 				break;
 			}
 			case ']':
 			{
+				// if (s.size() != 2) 
 				invertor_two--;
 				if (invertor_two < 0) return 0;
 				break;
 			}
 			case ')':
 			{
+				//if (s.size() != 2) 
 				invertor_three--;
 				if (invertor_three < 0) return 0;
 				break;
@@ -293,13 +304,16 @@ public:
 			// std::cout << dist_one << std::endl << dist_two << std::endl << dist_three << std::endl;
 			// std::cout << counter_find_one << std::endl << counter_find_two << std::endl << counter_find_three << std::endl;
 			// if (dist_one % 2 == 0 && dist_two % 2 == 0 && dist_three % 2 == 0) return true;
-			}
-			for (auto i : okey)
+			/*for (auto i : okey)
 				std::cout << i << " ";
 			if (((dist_one % 2) * (dist_two % 2) * (dist_three % 2)) == 0) return true;
 			else return false;
+			*/
+			}
 
 		}
+		if (invertor_three != 0 || invertor_two != 0 || invertor_one != 0) return false;
+		return true;
 	}
 };
 
@@ -310,7 +324,12 @@ int main()
 	std::string brackets = "{({(())}{()})}";
 	std::string brackets_ = "(())()";
 	std::string brackets__ = "[([{)(}])]";
+	std::string a = "()";
+	std::string b = "(]";
+	std::string hueta = "([}}])";
+	std::string devat_dva = "[({])}";
+	std::string what = "{[]}";
 	Solution daps;
-	daps.isValid(brackets__);
+	std::cout << daps.isValid(what);
 	return 0;
 }
