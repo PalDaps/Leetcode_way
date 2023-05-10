@@ -149,6 +149,9 @@ public:
 		int counter_of_duplicate = 0;
 		int counter_find_two = 0;
 		int counter_find_three = 0;
+		int invertor_one = 0;
+		int invertor_two = 0;
+		int invertor_three = 0;
 		std::vector<int> okey;
 		for (int i = 0; i < s.size(); i++)
 		{
@@ -156,6 +159,7 @@ public:
 			{
 			case '{':
 			{
+				invertor_one++;
 				for (int j = i + 1; j < s.size(); j++)
 				{
 
@@ -163,9 +167,11 @@ public:
 					{
 						counter_of_duplicate++;
 						counter++;
+						invertor_one++;
 					}
 					else if (s[j] == '}')
 					{
+						invertor_one--;
 						if (counter_of_duplicate == 0)
 						{
 							dist_one = counter;
@@ -192,15 +198,18 @@ public:
 			}
 			case '[':
 			{
+				invertor_two++;
 				for (int j = i + 1; j < s.size(); j++)
 				{
 					if (s[j] == '[')
 					{
+						invertor_two++;
 						counter_of_duplicate++;
 						counter++;
 					}
 					else if (s[j] == ']')
 					{
+						invertor_two--;
 						if (counter_of_duplicate == 0)
 						{
 							dist_two = counter;
@@ -215,7 +224,7 @@ public:
 							}
 						}
 						counter++;
-						if ( counter_of_duplicate>= 1 ) counter_of_duplicate--;
+						if (counter_of_duplicate >= 1) counter_of_duplicate--;
 					}
 					else
 					{
@@ -227,20 +236,23 @@ public:
 			}
 			case '(':
 			{
+				invertor_three++;
 				for (int j = i + 1; j < s.size(); j++)
 				{
 					if (s[j] == '(')
 					{
+						invertor_three++;
 						counter_of_duplicate++;
 						counter++;
 					}
 					else if (s[j] == ')')
 					{
+						invertor_three--;
 						if (counter_of_duplicate == 0)
 						{
 							dist_three = counter;
 							if (dist_three % 2 == 0)
-							{ 
+							{
 								// != 0 std::cout << dist_one;
 								okey.push_back(dist_three);
 								dist_three = 0;
@@ -260,32 +272,34 @@ public:
 				counter = 0;
 				break;
 			}
-			/*case '}':
+			case '}':
 			{
+				invertor_one--;
+				if (invertor_one < 0) return 0;
 				break;
 			}
 			case ']':
 			{
+				invertor_two--;
+				if (invertor_two < 0) return 0;
 				break;
 			}
 			case ')':
 			{
+				invertor_three--;
+				if (invertor_three < 0) return 0;
 				break;
-			}
-
-			}
-			*/
-
 			}
 			// std::cout << dist_one << std::endl << dist_two << std::endl << dist_three << std::endl;
 			// std::cout << counter_find_one << std::endl << counter_find_two << std::endl << counter_find_three << std::endl;
 			// if (dist_one % 2 == 0 && dist_two % 2 == 0 && dist_three % 2 == 0) return true;
-		}
-		for (auto i : okey)
-			std::cout << i << " ";
-		if (((dist_one % 2) * (dist_two % 2) * (dist_three % 2)) == 0) return true;
-		else return false;
+			}
+			for (auto i : okey)
+				std::cout << i << " ";
+			if (((dist_one % 2) * (dist_two % 2) * (dist_three % 2)) == 0) return true;
+			else return false;
 
+		}
 	}
 };
 
