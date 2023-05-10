@@ -174,6 +174,7 @@ public:
 								// != 0 std::cout << dist_one;
 								okey.push_back(dist_one);
 								dist_one = 0;
+								j = s.size();
 								continue;
 								// return 0;
 							}
@@ -208,6 +209,7 @@ public:
 								// != 0 std::cout << dist_one;
 								okey.push_back(dist_two);
 								dist_two = 0;
+								j = s.size();
 								continue;
 								// return 0;
 							}
@@ -242,6 +244,7 @@ public:
 								// != 0 std::cout << dist_one;
 								okey.push_back(dist_three);
 								dist_three = 0;
+								j = s.size();
 								continue;
 								// return 0;
 							}
@@ -292,7 +295,8 @@ int main()
 {
 	std::string brackets = "{({(())}{()})}";
 	std::string brackets_ = "(())()";
+	std::string brackets__ = "[([{)(}])]";
 	Solution daps;
-	daps.isValid(brackets);
+	daps.isValid(brackets__);
 	return 0;
 }
