@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-
+/*
 class Solution {
 public:
 	std::string mergeAlternately(std::string w1, std::string w2) {
@@ -14,6 +14,24 @@ public:
 		}
 		return result;
 	}
+};
+*/
+
+// after 15 min
+class Solution {
+public:
+	std::string mergeAlternately(std::string a, std::string b) {
+		std::string result = "";
+		int n = a.size(), m = b.size(), i = 0, j = 0;
+		while (i < n || j < m) {
+			if (i < n)
+				result.push_back(a[i++]);
+			if (j < m)
+				result.push_back(b[j++]);
+		}
+		return result;
+	}
+
 };
 
 int main() {
