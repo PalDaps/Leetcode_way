@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string>
+
+class Solution {
+public:
+	std::string mergeAlternately(std::string w1, std::string w2) {
+		std::string result = "";
+		int n = w1.size(), m = w2.size(), i = 0, j = 0;
+		while (i < n || j < m) {
+			if (i < n)
+				result.push_back(w1[i++]);
+			if (j < m)
+				result.push_back(w2[j++]);
+		}
+		return result;
+	}
+};
+
+int main() {
+	std::string a = "abc", b = "pq";
+	Solution daps;
+	std::cout << daps.mergeAlternately(a, b);
+	return 0;
+}
