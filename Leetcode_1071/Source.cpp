@@ -8,6 +8,7 @@ public:
 		std::string result = "";
 		std::string result_two = "";
 		std::string result_three = "";
+		bool one_char = false;
 		bool flag = 0;
 		for (int i = 1; i < str1.size(); i++) {
 			std::string temp = "";
@@ -27,6 +28,36 @@ public:
 			substring = "";
 		}
 		if (substring == "") return "";
+		int counter_str1 = 0;
+		int counter_str2 = 0;
+		for (int i = 1; i < str1.size(); i++) {
+			if (str1[i - 1] == str1[i]) {
+				counter_str1++;
+			}
+		}
+		for (int i = 1; i < str2.size(); i++) {
+			if (str2[i - 1] == str2[i]) {
+				counter_str2++;
+			}
+		}
+		if (counter_str1 + 1 == str1.size() && counter_str2 + 1== str2.size())
+			one_char = true;
+		if (one_char) {
+			int ost = 1;
+			counter_str1 = counter_str1 + 1;
+			counter_str2 = counter_str2 + 1;
+			if (counter_str2 < counter_str1)
+				std::swap(counter_str2, counter_str1);
+			while (ost != 0) {
+				ost = counter_str2 % counter_str1;
+				counter_str2 = counter_str1;
+				counter_str1 = ost;
+			}
+			for (int i = 0; i < counter_str2; i++) {
+				result = result + substring;
+			}
+			return result;
+		}
 		for (int i = 0; i < std::min(substring.size(), str2.size()); i++) {
 			if (substring[i] == str2[i])
 				result.push_back(substring[i]);
@@ -48,9 +79,18 @@ public:
 };
 
 int main() {
-	std::string test = "AAAAAAAAA";
-	std::string test1 = "AAACCC";
+	std::string test = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	std::string test1 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 	Solution daps;
+	int a = 1;
+	int b = 8;
+	int ost = 1;
+	while (ost != 0) {
+		ost = b % a;
+		b = a;
+		a = ost;
+	}
+	// std::cout << b; 
 	std::cout << daps.gcdOfString(test, test1);
 	return 0;
 }
