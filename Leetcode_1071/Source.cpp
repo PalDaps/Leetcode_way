@@ -7,6 +7,7 @@ public:
 		std::string substring = "";
 		std::string result = "";
 		std::string result_two = "";
+		std::string result_three = "";
 		bool flag = 0;
 		for (int i = 1; i < str1.size(); i++) {
 			std::string temp = "";
@@ -25,6 +26,7 @@ public:
 			if (flag) break;
 			substring = "";
 		}
+		if (substring == "") return "";
 		for (int i = 0; i < std::min(substring.size(), str2.size()); i++) {
 			if (substring[i] == str2[i])
 				result.push_back(substring[i]);
@@ -36,6 +38,11 @@ public:
 			if (result_two == str1)
 				return str2;
 		}
+		for (int i = 0; result_three.size() < str2.size(); i++) {
+			result_three = result_three + substring;
+		}
+		if (result_three != str2)
+			return "";
 		return result;
 	}
 };
