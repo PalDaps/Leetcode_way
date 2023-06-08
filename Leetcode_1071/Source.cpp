@@ -27,6 +27,8 @@ public:
 			if (flag) break;
 			substring = "";
 		}
+		if (str1.size() == 1 && str1[0] == str2[0])
+			return str1;
 		if (substring == "") return "";
 		std::string temp_substring = "";
 		std::string smallest_substring = substring;
@@ -37,8 +39,8 @@ public:
 				result = result + temp;
 				if (result == str1) {
 					if (temp.size() > substring.size()) {
-						substring = temp;
 						result = "";
+						substring = temp;
 						for (int k = 0; result.size() < str2.size(); k++) {
 							result = result + substring;
 							if (result == str2) {
@@ -46,6 +48,7 @@ public:
 								flag_new = true;
 							}
 						}
+						// if (flag_new) substring = temp;
 						result = "";
 					}
 				}
@@ -53,8 +56,7 @@ public:
 					break;
 			}
 		}
-		substring = temp_substring;
-		if (flag_new) return substring;
+		result = "";
 		int counter_str1 = 0;
 		int counter_str2 = 0;
 		for (int i = 1; i < str1.size(); i++) {
@@ -69,6 +71,20 @@ public:
 		}
 		if (counter_str1 + 1 == str1.size() && counter_str2 + 1== str2.size())
 			one_char = true;
+		if (one_char && str1 == str2) {
+			return str1;
+		}
+		if (!flag_new || str1.size() == str2.size()) {
+			substring = smallest_substring;
+			result = "";
+		}
+		if (flag_new && str1 != str2 && !one_char) return temp_substring;
+		if (one_char && str1 == str2 && str1.size()%2 == 0) {
+			for (int i = 0; i < str1.size() / 2; i++) {
+				result = result + smallest_substring;
+			}
+			return result;
+		}
 		if (one_char) {
 			int ost = 1;
 			counter_str1 = counter_str1 + 1;
@@ -81,7 +97,7 @@ public:
 				counter_str1 = ost;
 			}
 			for (int i = 0; i < counter_str2; i++) {
-				result = result + substring;
+				result = result + smallest_substring;
 			}
 			return result;
 		}
@@ -106,14 +122,16 @@ public:
 };
 
 int main() {
-	std::string test = "ADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBB";
-	std::string test1 = "ADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBBADADCCBBCBDCDDBABCBB";
+	std::string test = "A";
+	std::string test1 = "AA";
+	std::string t_test = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	std::string t_test1 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 	Solution daps;
-	int a = 1;
-	int b = 8;
+	int a = 360;
+	int b = 640;
 	int ost = 1;
 	while (ost != 0) {
-		ost = b % a;
+		ost = b % a;	
 		b = a;
 		a = ost;
 	}
