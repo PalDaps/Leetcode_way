@@ -55,6 +55,7 @@ public:
 };
 */
 // after 2 days
+/*
 class Solution {
 public: 
 	std::string mergeAlternately(std::string word1, std::string word2) {
@@ -69,7 +70,26 @@ public:
 		return result;
 	}
 };
-// after 5 days i need check
+*/
+
+// after 5 days check
+// 6/11/2023 I still remember it!
+class Solution {
+public:
+	std::string mergeAlternately(std::string word1, std::string word2) {
+		std::string result = "";
+		int n = word1.size();
+		int m = word2.size();
+		int i = 0, j = 0;
+		while (i < n || j < m) {
+			if (i < n)
+				result.push_back(word1[i++]);
+			if (j < m)
+				result.push_back(word2[j++]);
+		}
+		return result;
+	}
+};
 
 int main() {
 	std::string a = "abc", b = "pq";
