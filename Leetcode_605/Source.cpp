@@ -4,6 +4,7 @@
 class Solution {
 public:
 	bool canPlaceFlowers(std::vector<int>& flowerbed, int n) {
+		if (flowerbed.size() == 1 && flowerbed[0] == 0) return true;
 		int counter_zebra = 0;
 		bool flag = false;
 		for (int i = 1; i < flowerbed.size(); i++) {
@@ -13,12 +14,12 @@ public:
 		}
 		if (counter_zebra == flowerbed.size() - 1 && flowerbed.size() > 1 && n != 0)
 			return false;
-		if (flowerbed[0] == 0)
-			flowerbed.insert(flowerbed.begin(), 0);
-		if (flowerbed[flowerbed.size() - 1] == 0) {
-			flowerbed.push_back(0);
-			flag = true;
-		}
+		// if (flowerbed[0] == 0)
+			// flowerbed.insert(flowerbed.begin(), 0);
+		// if (flowerbed[flowerbed.size() - 1] == 0) {
+			// flowerbed.push_back(0);
+			// flag = true;
+	// 	}
 		for (int i = 1; i < flowerbed.size(); i++) {
 			if (flowerbed[i - 1] == 1 && flowerbed[i] != 0)
 				return false;
@@ -27,16 +28,28 @@ public:
 		}
 		if (n == 0) return true;
 		int counter_null = 1;
+		bool flag_start = false;
+		bool flag_finish = false;
 		for (int i = 1; i < flowerbed.size(); i++) {
-			if (flowerbed[i - 1] == 0 && flowerbed[i] == 0) {
+			if (i==1 && flowerbed[0] == 0 && flowerbed[1] == 0 && !flag_start) {
 				counter_null++;
-				if (flowerbed[i - 1] == flowerbed[flowerbed.size() - 2] && flowerbed[i] == flowerbed[flowerbed.size() - 1] && flowerbed[flowerbed.size() - 3] == 1)
-					break;
+				flag_start = 1;
+				n--;
+				if (n == 0) return true;
+			}
+			if (flowerbed[i - 1] == 0 && flowerbed[i] == 0 && i < flowerbed.size() - 1 && i > 1) {
+				counter_null++;
 				if (counter_null == 3) {
 					n--;
 					if (n == 0) return true;
 					counter_null = 1;
 				}
+			}
+			if (i == flowerbed.size()-1 && flowerbed[flowerbed.size()-1] == 0 && flowerbed[flowerbed.size() - 2] == 0 && !flag_finish && flowerbed.size() > 2) {
+				counter_null++;
+				flag_finish = 1;
+				n--;
+				if (n == 0) return true;
 			}
 		}
 		return false;
@@ -44,8 +57,8 @@ public:
 };
 
 int main() {
-	std::vector<int> test = { 1,0,1,0,0,1,0 };
+	std::vector<int> test = { 0,0,0,0 };
 	Solution daps;
-	std::cout << daps.canPlaceFlowers(test, 1);
+	std::cout << daps.canPlaceFlowers(test, 3);
 	return 0;
 }
