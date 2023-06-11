@@ -54,6 +54,7 @@ public:
 		}
 		return false;
 		*/
+		/*
 		std::vector<int> result;
 		int fivex = 0;
 		int lavex = flowerbed.size() - 1;
@@ -83,12 +84,61 @@ public:
 			std::cout << i << " ";
 		std::cout << std::endl;
 		return false;
+		*/
+		int sz = flowerbed.size();
+		int fivex = 0;
+		int lavex = sz - 1;
+		int counter_of_null = 0;
+		bool end = false;
+		for (int i = 0; i < sz-1; i++) {
+			if (i == fivex) {
+				if (flowerbed[i] == 0 && flowerbed[i + 1] == 0) {
+					flowerbed[i] = 1;
+					n--;
+					if (n == 0) {
+						end = 1;
+						break;
+					}
+				}
+			}
+			if (i > fivex && i < lavex) {
+				if (flowerbed[i] == 0) {
+					counter_of_null++;
+					if (counter_of_null == 3) {
+						flowerbed[i - 1] = 1;
+						n--;
+						if (n == 0) {
+							end = 1;
+							break;
+						}
+						counter_of_null = 1;
+					}
+				}
+				else
+					counter_of_null = 0;
+			}
+			if (i + 1 == lavex) {
+				if (flowerbed[i] == 0 && flowerbed[i+1] == 0) {
+					flowerbed[i + 1] = 1;
+					n--;
+					if (n == 0) {
+						end = 1;
+						break;
+					}
+				}
+			}
+		}
+		std::cout << "counter_of_null = " << counter_of_null << std::endl;
+		for (auto i : flowerbed)
+			std::cout << i << " ";
+		std::cout << std::endl;
+		return false;
 	}
 };
 
 int main() {
-	std::vector<int> test = { 0, 0, 0, 1};
+	std::vector<int> test = { 1, 0, 0};
 	Solution daps;
-	std::cout << daps.canPlaceFlowers(test, 2);
+	std::cout << daps.canPlaceFlowers(test, 1);
 	return 0;
 }
