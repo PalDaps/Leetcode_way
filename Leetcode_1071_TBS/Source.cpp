@@ -42,6 +42,7 @@ public:
 
 // after a day 6/9/2023
 // succes
+/*
 class Solution {
 public:
 	std::string gcdOfStrings(std::string str1, std::string str2) {
@@ -59,3 +60,29 @@ public:
 		return str1 + str2 == str2 + str1 ? str1.substr(0, b) : "";
 	}
 };
+*/
+
+// succes
+// 6/13/2023
+class Solution {
+public:
+	std::string gcdOfStrings(std::string str1, std::string str2) {
+		int ost = 1;
+		int n = str1.size();
+		int m = str2.size();
+		if (n > m) std::swap(n, m);
+		while (ost != 0) {
+			ost = m % n;
+			m = n;
+			n = ost;
+		}
+		return str1 + str2 == str2 + str1 ? str1.substr(0, m) : "";
+	}
+};
+
+int main() {
+	Solution daps;
+	std::string str1 = "ABCABC";
+	std::string str2 = "ABC";
+	daps.gcdOfStrings(str1, str2);
+}
