@@ -1,5 +1,8 @@
 #include <iostream>
 
+
+// I don't believe in myself. He said that this was a good option 
+// and would not pass all the tests. But she damn passed
 class Solution {
 public:
 	std::string reverseVowels(std::string s) {
