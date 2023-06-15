@@ -33,7 +33,7 @@ public:
 					if (temp == "") EndWord--;
 					if (temp != "") {
 						result += temp;
-						if (s[i-1] == ' ') result.push_back(' ');
+						if (s[i] == ' ' && s[i+1] != ' ') result.push_back(' ');
 					}
 					std::cout << s.substr(i + 1, EndWord) << std::endl;
 					
@@ -69,14 +69,14 @@ public:
 };
 
 int main() {
-	std::string test1 = "      ";
-	std::string test2 = "A B";
+	std::string test1 = " b a b a";
+	std::string test2 = "a good   example";
 	std::string res = "";
-	std::string dob = test1.substr(6, test1.size()-1);
-	res += dob;
+	// std::string dob = test1.substr(6, test1.size()-1);
+	// res += dob;
 	// std::cout << res << std::endl;
 	// std::cout << res.size() << std::endl;
 	Solution daps;
-	std::cout << daps.reverseWords(test1);
+	std::cout << daps.reverseWords(test2);
 	return 0;
 }
