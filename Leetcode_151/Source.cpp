@@ -39,6 +39,9 @@ public:
 					
 				}
 			}
+			// for fucking single element
+			if (i == 0 && s[0] != ' ' && s[1] == ' ')
+				result.push_back(s[0]);
 		}
 		if (result[result.size() - 1] == ' ')
 			result.pop_back();
@@ -69,7 +72,7 @@ public:
 };
 
 int main() {
-	std::string test1 = " b a b a";
+	std::string test1 = "        a   b     ";
 	std::string test2 = "a good   example";
 	std::string res = "";
 	// std::string dob = test1.substr(6, test1.size()-1);
