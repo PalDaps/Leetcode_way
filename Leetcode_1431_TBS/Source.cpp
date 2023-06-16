@@ -25,11 +25,29 @@
 
 // 6/13/2023
 // the failure
+//class Solution {
+//public:
+//    std::vector<bool> kidsWithCandies(std::vector<int>&candies, int extraCandies) {
+//        std::vector<bool> result;
+//        int max = *std::max_element(candies.begin(), candies.end());
+//        for (int i = 0; i < candies.size(); i++) {
+//            if (candies[i] + extraCandies >= max)
+//                result.push_back(true);
+//            else
+//                result.push_back(false);
+//        }
+//        return result;
+//    }
+//};
+
+// 6/16/2023
+// succes 100%!
+// For some reason I remember it!
 class Solution {
 public:
-    std::vector<bool> kidsWithCandies(std::vector<int>&candies, int extraCandies) {
-        std::vector<bool> result;
+    std::vector<bool> kidsWithCandies(std::vector<int>& candies, int extraCandies) {
         int max = *std::max_element(candies.begin(), candies.end());
+        std::vector<bool> result;
         for (int i = 0; i < candies.size(); i++) {
             if (candies[i] + extraCandies >= max)
                 result.push_back(true);
