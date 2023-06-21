@@ -114,19 +114,22 @@ public:
 
 // 6/16/2023
 // succes!! I remembered it very easily and quickly!
-class Solution {
-public:
-	std::string mergeAlternately(std::string word1, std::string word2) {
-		int n = word1.size(), m = word2.size();
-		int i = 0, j = 0;
-		std::string result = "";
-		while (i < n || j < m) {
-			if (i < n) result.push_back(word1[i++]);
-			if (j < m) result.push_back(word2[j++]);
-		}
-		return result;
-	}
-};
+//class Solution {
+//public:
+//	std::string mergeAlternately(std::string word1, std::string word2) {
+//		int n = word1.size(), m = word2.size();
+//		int i = 0, j = 0;
+//		std::string result = "";
+//		while (i < n || j < m) {
+//			if (i < n) result.push_back(word1[i++]);
+//			if (j < m) result.push_back(word2[j++]);
+//		}
+//		return result;
+//	}
+//};
+
+// 6 / 21 / 2023
+// SUCCES!!!
 
 int main() {
 	std::string a = "abc", b = "pq";
