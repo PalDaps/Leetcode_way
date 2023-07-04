@@ -72,6 +72,9 @@
 // Succes!
 // succes!! 6/24/2023
 
+// 7 / 4 / 2023
+// I remember both versions of the problem. The epic Succes!! 
+
 class Solution {
 public:
     std::string reverseVowels(std::string s) {
