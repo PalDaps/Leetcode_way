@@ -13,6 +13,8 @@ public:
 	}
 };
 
+
+// remembers it 7 / 4 /2023 Succes!;
 int main() {
 	uint32_t n = 0b1100;
 	// std::cout << n << std::endl;
