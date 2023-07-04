@@ -18,17 +18,31 @@
 
 // more nice solution i need to remember it nice
 
+//class Solution {
+//public:
+//	bool isPalindrome(int x) {
+//		int temp = x;
+//		unsigned int sum = 0;
+//		while (temp > 0) {
+//			sum = sum * 10 + temp % 10;
+//			temp /= 10;
+//		}
+//		return temp == x;
+//	}
+//};
+
+// after 10 min 7 / 4 / 2023 SUCCES!
 class Solution {
 public:
-	bool isPalindrome(int x) {
-		int temp = x;
-		unsigned int sum = 0;
-		while (temp > 0) {
-			sum = sum * 10 + temp % 10;
-			temp /= 10;
-		}
-		return temp == x;
-	}
+    bool isPalindrome(int x) {
+        int temp = x;
+        unsigned int sum = 0;
+        while (temp > 0) {
+            sum = sum * 10 + temp % 10;
+            temp /= 10;
+        }
+        return sum == x;
+    }
 };
 
 int main()
