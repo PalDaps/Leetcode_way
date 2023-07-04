@@ -43,6 +43,22 @@
 // 
 // to be repeated later after 10 min 7 / 4 / 2023 SUCCES!;
 
+//class Solution {
+//public:
+//    std::vector<int> twoSum(std::vector<int>& nums, int target) {
+//        std::unordered_map<int, int> map;
+//        for (int i = 0; i < nums.size(); i++) {
+//            int delta = target - nums[i];
+//            if (map.count(delta))
+//                return { map[delta], i };
+//            map[nums[i]] = i;
+//        }
+//        return {};
+//    }
+//};
+
+
+// after 30 min remember it. Succes!
 class Solution {
 public:
     std::vector<int> twoSum(std::vector<int>& nums, int target) {
