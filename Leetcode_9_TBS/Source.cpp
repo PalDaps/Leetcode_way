@@ -47,6 +47,21 @@
 
 
 // after 30 minut remember. SUCCESs!! 7 / 4 /2023;
+//class Solution {
+//public:
+//    bool isPalindrome(int x) {
+//        int temp = x;
+//        unsigned int sum = 0;
+//        while (temp > 0) {
+//            sum = sum * 10 + temp % 10;
+//            temp /= 10;
+//        }
+//        return sum == x;
+//    }
+//};
+
+
+// after a day 7 / 5 / 2023 SUCCES!
 class Solution {
 public:
     bool isPalindrome(int x) {
