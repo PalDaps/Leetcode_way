@@ -15,45 +15,64 @@ struct ListNode
 	}
 };
 
-class Solution
-{
-public: 
-	ListNode* mergeTwoLists(ListNode* list1, ListNode* list2)
-	{
-		ListNode* result = new ListNode(0);
-		ListNode* current_result = result;
-   		while (true)
-		{
-			if (list1 == nullptr && list2 == nullptr)
-			{
-				return result->next;
-			}
-			else if (list1 == nullptr)
-			{
-				current_result->next = list2;
-				return result->next;
-			}
-			else if (list2 == nullptr)
-			{
-				current_result->next = list1;
-				return result->next;
-			}
-			else
-			{
-				if (list1->val < list2->val)
-				{
-					current_result->next = list1;
-					current_result = current_result->next;
-					list1 = list1->next;
-				}
-				else
-				{
-					current_result->next = list2;
-					current_result = current_result->next;
-					list2 = list2->next;
-				}
-			}
+//class Solution
+//{
+//public: 
+//	ListNode* mergeTwoLists(ListNode* list1, ListNode* list2)
+//	{
+//		ListNode* result = new ListNode(0);
+//		ListNode* current_result = result;
+//   		while (true)
+//		{
+//			if (list1 == nullptr && list2 == nullptr)
+//			{
+//				return result->next;
+//			}
+//			else if (list1 == nullptr)
+//			{
+//				current_result->next = list2;
+//				return result->next;
+//			}
+//			else if (list2 == nullptr)
+//			{
+//				current_result->next = list1;
+//				return result->next;
+//			}
+//			else
+//			{
+//				if (list1->val < list2->val)
+//				{
+//					current_result->next = list1;
+//					current_result = current_result->next;
+//					list1 = list1->next;
+//				}
+//				else
+//				{
+//					current_result->next = list2;
+//					current_result = current_result->next;
+//					list2 = list2->next;
+//				}
+//			}
+//		}
+//	}
+//};
+
+class Solution {
+public:
+	ListNode* mergeTwoLists(ListNode* first, ListNode* second) {
+		ListNode* current = first;
+		ListNode* res = first;
+		while (current != nullptr) {
+			current = current->next;
+				
 		}
+		current = second;
+		current = first;
+		while (current != nullptr) {
+			std::cout << current << " ";
+			current = current->next;
+		}
+		return current;
 	}
 };
 
@@ -90,11 +109,11 @@ int main()
 
 	Solution daps;
 	current = daps.mergeTwoLists(head, head_);
-	while (current != nullptr)
+	/*while (current != nullptr)
 	{
 		std::cout << current->val << " ";
 		current = current->next;
-	}
+	}*/
 
 	// delete memory
 	/* current = head;
