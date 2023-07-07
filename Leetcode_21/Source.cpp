@@ -57,22 +57,56 @@ struct ListNode
 //	}
 //};
 
+//class Solution {
+//public:
+//	ListNode* mergeTwoLists(ListNode* first, ListNode* second) {
+//		ListNode* current = first;
+//		ListNode* res = first;
+//		while (current != nullptr) {
+//			current = current->next;
+//				
+//		}
+//		current = second;
+//		current = first;
+//		while (current != nullptr) {
+//			std::cout << current << " ";
+//			current = current->next;
+//		}
+//		return current;
+//	}
+//};
+
 class Solution {
 public:
 	ListNode* mergeTwoLists(ListNode* first, ListNode* second) {
-		ListNode* current = first;
-		ListNode* res = first;
-		while (current != nullptr) {
-			current = current->next;
-				
+		ListNode res(0);
+		ListNode* temp = &res;
+		while (true) {
+			if (first == nullptr && second == nullptr) {
+				return nullptr;
+			}
+			else if (first == nullptr) {
+				temp->next = second;
+				return res.next;
+			}
+			else if (second == nullptr) {
+				temp->next = first;
+				return res.next;
+			}
+			else {
+				if (first->val < second->val) {
+					temp->next = first;
+					first = first->next;
+					temp = temp->next;
+				}
+				else {
+					temp->next = second; // просто темп надо брать
+					second = second->next;
+					temp = temp->next;
+				}
+			}
 		}
-		current = second;
-		current = first;
-		while (current != nullptr) {
-			std::cout << current << " ";
-			current = current->next;
-		}
-		return current;
+		return res.next;
 	}
 };
 
@@ -109,11 +143,11 @@ int main()
 
 	Solution daps;
 	current = daps.mergeTwoLists(head, head_);
-	/*while (current != nullptr)
+	while (current != nullptr)
 	{
 		std::cout << current->val << " ";
 		current = current->next;
-	}*/
+	}
 
 	// delete memory
 	/* current = head;

@@ -62,6 +62,20 @@
 
 
 // after a day 7 / 5 / 2023 SUCCES!
+//class Solution {
+//public:
+//    bool isPalindrome(int x) {
+//        int temp = x;
+//        unsigned int sum = 0;
+//        while (temp > 0) {
+//            sum = sum * 10 + temp % 10;
+//            temp /= 10;
+//        }
+//        return sum == x;
+//    }
+//};
+
+// SUCCES! 7 / 7 / 2023
 class Solution {
 public:
     bool isPalindrome(int x) {
@@ -74,7 +88,6 @@ public:
         return sum == x;
     }
 };
-
 int main()
 {
 	Solution daps;

@@ -74,19 +74,21 @@
 //};
 
 // after a day 7 / 5 / 2023 SUCCES!
-class Solution {
-public:
-    std::vector<int> twoSum(std::vector<int>& nums, int target) {
-        std::unordered_map<int, int> map;
-        for (int i = 0; i < nums.size(); i++) {
-            int delta = target - nums[i];
-            if (map.count(delta))
-                return { map[delta], i };
-            map[nums[i]] = i;
-        }
-        return {};
-    }
-};
+//class Solution {
+//public:
+//    std::vector<int> twoSum(std::vector<int>& nums, int target) {
+//        std::unordered_map<int, int> map;
+//        for (int i = 0; i < nums.size(); i++) {
+//            int delta = target - nums[i];
+//            if (map.count(delta))
+//                return { map[delta], i };
+//            map[nums[i]] = i;
+//        }
+//        return {};
+//    }
+//};
+
+// after a 2 day 7 / 7 / 2023 Succes!
 
 int main()
 {

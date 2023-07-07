@@ -25,20 +25,39 @@
 
 // the first repetition of the problem 7 / 6 /2023
 
+//class Solution {
+//public:
+//    std::string longestCommonPrefix(std::vector<std::string>& strs) {
+//        std::sort(strs.begin(), strs.end());
+//        std::string first = strs[0];
+//        std::string last = strs[strs.size() - 1];
+//        std::string result = "";
+//        for (int i = 0; i < std::min(first.size(), last.size()); i++) {
+//            if (first[i] == last[i]) {
+//                result = result + first[i];
+//            }
+//            else break;
+//        }
+//        return result;
+//    }
+//};
+
+
+// 7 / 7 / 2023 SUCCES!
+
 class Solution {
 public:
     std::string longestCommonPrefix(std::vector<std::string>& strs) {
         std::sort(strs.begin(), strs.end());
         std::string first = strs[0];
         std::string last = strs[strs.size() - 1];
-        std::string result = "";
+        std::string res = "";
         for (int i = 0; i < std::min(first.size(), last.size()); i++) {
-            if (first[i] == last[i]) {
-                result = result + first[i];
-            }
+            if (first[i] == last[i])
+                res += first[i];
             else break;
         }
-        return result;
+        return res;
     }
 };
 
