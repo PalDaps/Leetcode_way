@@ -41,6 +41,9 @@ public:
     }
 };
 
+// after an hour checked and try to solve this problem. And it was a succes!
+// 7 / 8 / 2023
+
 int main() {
 	std::vector<int> test = { 1,2,3,4 };
 	Solution daps;
