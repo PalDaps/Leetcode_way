@@ -23,3 +23,7 @@ public:
 		return indexAns;
 	}
 };
+
+// need after 15 min repeat this nice solution
+
+// SUCCES!But it went hard.
