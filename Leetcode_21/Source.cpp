@@ -76,37 +76,74 @@ struct ListNode
 //	}
 //};
 
+//class Solution {
+//public:
+//	ListNode* mergeTwoLists(ListNode* first, ListNode* second) {
+//		ListNode res(0);
+//		ListNode* temp = &res;
+//		while (true) {
+//			if (first == nullptr && second == nullptr) {
+//				return nullptr;
+//			}
+//			else if (first == nullptr) {
+//				temp->next = second;
+//				return res.next;
+//			}
+//			else if (second == nullptr) {
+//				temp->next = first;
+//				return res.next;
+//			}
+//			else {
+//				if (first->val < second->val) {
+//					temp->next = first;
+//					first = first->next;
+//					temp = temp->next;
+//				}
+//				else {
+//					temp->next = second; // просто темп надо брать
+//					second = second->next;
+//					temp = temp->next;
+//				}
+//			}
+//		}
+//		return res.next;
+//	}
+//};
+
+// after a day. I remember it, but i cought this rofl mistake:
+// curr->next == list1 xDDDDDDDDDDDDDDD 20 min is waste
+
 class Solution {
 public:
-	ListNode* mergeTwoLists(ListNode* first, ListNode* second) {
+	ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
 		ListNode res(0);
-		ListNode* temp = &res;
+		ListNode* curr = &res;
 		while (true) {
-			if (first == nullptr && second == nullptr) {
-				return nullptr;
-			}
-			else if (first == nullptr) {
-				temp->next = second;
+			if (list1 == nullptr && list2 == nullptr) {
 				return res.next;
 			}
-			else if (second == nullptr) {
-				temp->next = first;
+			else if (list1 == nullptr) {
+				curr->next = list2;
+				return res.next;
+			}
+			else if (list2 == nullptr) {
+				curr->next = list1;
 				return res.next;
 			}
 			else {
-				if (first->val < second->val) {
-					temp->next = first;
-					first = first->next;
-					temp = temp->next;
+				if (list1->val < list2->val) {
+					curr->next = list1;
+					list1 = list1->next;
+					curr = curr->next;
 				}
 				else {
-					temp->next = second; // просто темп надо брать
-					second = second->next;
-					temp = temp->next;
+					curr->next = list2;
+					list2 = list2->next;
+					curr = curr->next;
 				}
 			}
+
 		}
-		return res.next;
 	}
 };
 
