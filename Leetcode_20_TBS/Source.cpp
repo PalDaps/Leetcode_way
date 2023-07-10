@@ -46,6 +46,9 @@ public:
     }
 };
 
+// 7 / 10 / 2023 The failure. else if (st.empty() || st.top() != i)
+//                                  return false;
+
 int main() {
 	Solution daps;
 	std::string test = "()[]{}";

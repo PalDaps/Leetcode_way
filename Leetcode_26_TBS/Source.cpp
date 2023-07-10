@@ -1,20 +1,28 @@
 #include <iostream>
 #include <vector>
 
-class Solution
-{
-public:
-	int removeDuplicates(std::vector<int>& nums)
-	{
-		int counter = 0;
-		for (int i = 1; i < nums.size(); i++)
-		{
-			if (nums[i - 1] == nums[i]) counter++;
-			else nums[i - counter] = nums[i];
-		}
-		return nums.size() - counter;
-	}
-};
+//class Solution
+//{
+//public:
+//	int removeDuplicates(std::vector<int>& nums)
+//	{
+//		int counter = 0;
+//		for (int i = 1; i < nums.size(); i++)
+//		{
+//			if (nums[i - 1] == nums[i]) counter++;
+//			else nums[i - counter] = nums[i];
+//		}
+//		return nums.size() - counter;
+//	}
+//};
+
+
+// 7 / 10 / 2023 Remember. The failure.
+
+
+// After a 10 min
+// 7 / 10 / 2023 Succes!
+
 
 int main()
 {
