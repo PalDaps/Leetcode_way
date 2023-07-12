@@ -15,6 +15,8 @@ public:
 
 
 // remembers it 7 / 4 /2023 Succes!;
+
+// 7 / 12 / 2023 / SUCCES!
 int main() {
 	uint32_t n = 0b1100;
 	// std::cout << n << std::endl;

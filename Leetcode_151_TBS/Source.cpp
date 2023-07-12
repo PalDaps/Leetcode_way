@@ -116,6 +116,9 @@ public:
 
 // SUCCES! 7 / 8 / 2023
 
+// 7 / 12 / 2023 SUCCES! But it I don't remember well 
+// if (r > 0 && s[r - 1] == ' ') r--;
+
 int main() {
     std::string test1 = " hello world ";
     Solution daps;

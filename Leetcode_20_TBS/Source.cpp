@@ -47,7 +47,11 @@ public:
 };
 
 // 7 / 10 / 2023 The failure. else if (st.empty() || st.top() != i)
-//                                  return false;
+// return false;
+
+
+// 7 / 12 / 2023
+// succes
 
 int main() {
 	Solution daps;
