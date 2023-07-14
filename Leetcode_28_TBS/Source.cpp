@@ -17,6 +17,9 @@ public:
 // 7 / 14 / 2023 / SUCCES!
 // But this solution is quite difficult to understand, maybe I can do it when I fully learn it
 
+// after a 40 minute 7 : 40 PM
+// 7 / 14 / 2023 / SUCCES
+
 int main() {
 	Solution daps;
 	std::string a = "sadbutsad";

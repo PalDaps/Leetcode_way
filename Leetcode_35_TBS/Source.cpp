@@ -20,6 +20,7 @@ public:
 		}
 		return nums[l] < target ? l + 1 : l; // Also an interesting line, which is difficult to understand. In general, it checks the last element that has not been checked by the main algorithm.
 	}
+
 };
 
 int main()
