@@ -26,6 +26,11 @@ public:
 
 // 7 / 12 / 2023 The Failure
 
+// 7 / 14 / 2023 The Failure
+// fucking blyat
+
+// after 50 min
+// 7 / 14 / 2023 / The SUCCES!
 int main()
 {
 	Solution daps;
