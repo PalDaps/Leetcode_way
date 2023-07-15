@@ -14,11 +14,14 @@ public:
 };
 
 // after a 5 minute 7 : 00 PM
-// 7 / 14 / 2023 / SUCCES!
+// 7 / 14 / 2023 / SUCCESS!
 // But this solution is quite difficult to understand, maybe I can do it when I fully learn it
 
 // after a 40 minute 7 : 40 PM
-// 7 / 14 / 2023 / SUCCES
+// 7 / 14 / 2023 / SUCCESS
+
+// 2 : 53 PM / 4
+// 7 / 15 / 2023 / SUCCESS
 
 int main() {
 	Solution daps;
