@@ -41,7 +41,7 @@
 
 
 // 
-// to be repeated later after 10 min 7 / 4 / 2023 SUCCES!;
+// to be repeated later after 10 min 7 / 4 / 2023 SUCCESS!;
 
 //class Solution {
 //public:
@@ -58,7 +58,7 @@
 //};
 
 
-// after 30 min remember it. Succes!
+// after 30 min remember it. Success!
 //class Solution {
 //public:
 //    std::vector<int> twoSum(std::vector<int>& nums, int target) {
@@ -73,7 +73,7 @@
 //    }
 //};
 
-// after a day 7 / 5 / 2023 SUCCES!
+// after a day 7 / 5 / 2023 SUCCESS!
 //class Solution {
 //public:
 //    std::vector<int> twoSum(std::vector<int>& nums, int target) {
@@ -88,12 +88,14 @@
 //    }
 //};
 
-// after a 2 day 7 / 7 / 2023 Succes!
+// after a 2 day 7 / 7 / 2023 Success!
 
-// succres 7 / 9 / 2023
+// success 7 / 9 / 2023
 
-// 7 / 12 / 2023 SUCCES!
+// 7 / 12 / 2023 SUCCESS!
 
+// 4 : 17 PM / 14
+// 7 / 15 / 2023 / SUCCESS!
 
 int main()
 {

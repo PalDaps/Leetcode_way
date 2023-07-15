@@ -30,13 +30,16 @@ public:
 // fucking blyat
 
 // after 50 min
-// 7 / 14 / 2023 / The SUCCES!
+// 7 / 14 / 2023 / The SUCCESS!
 
 // after 3 hours
-// 7 / 14 / 2023 / The SUCCES!
+// 7 / 14 / 2023 / The SUCCESS!
 
 // after 2 hours 7 : 45 PM
-// 7 / 14 / 2023 / SUCCES
+// 7 / 14 / 2023 / SUCCESS
+
+// 4 : 51 PM / 21
+// 7 / 15 / 2023 / SUCCESS
 
 int main()
 {

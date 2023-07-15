@@ -31,7 +31,7 @@
 //	}
 //};
 
-// after 10 min 7 / 4 / 2023 SUCCES!
+// after 10 min 7 / 4 / 2023 SUCCESS!
 //class Solution {
 //public:
 //    bool isPalindrome(int x) {
@@ -61,7 +61,7 @@
 //};
 
 
-// after a day 7 / 5 / 2023 SUCCES!
+// after a day 7 / 5 / 2023 SUCCESS!
 //class Solution {
 //public:
 //    bool isPalindrome(int x) {
@@ -75,7 +75,7 @@
 //    }
 //};
 
-// SUCCES! 7 / 7 / 2023
+// SUCCESS! 7 / 7 / 2023
 class Solution {
 public:
     bool isPalindrome(int x) {
@@ -89,9 +89,12 @@ public:
     }
 };
 
-// SUCCES! 7 / 9 / 2023
+// SUCCESS! 7 / 9 / 2023
 
-// 7 / 12 / 2023 SUCCES!
+// 7 / 12 / 2023 SUCCESS!
+
+// 4 : 20 PM / 15
+// 7 / 15 / 2023 / SUCCESS
 int main()
 {
 	Solution daps;

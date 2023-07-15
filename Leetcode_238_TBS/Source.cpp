@@ -41,10 +41,13 @@ public:
     }
 };
 
-// after an hour checked and try to solve this problem. And it was a succes!
+// after an hour checked and try to solve this problem. And it was a success!
 // 7 / 8 / 2023
 
-// 7 / 12 / 2023 SUCCES! Incredible
+// 7 / 12 / 2023 SUCCESS! Incredible
+
+// 4 : 07 PM / 12
+// 7 / 15 / 2023 / SUCCESS
 int main() {
 	std::vector<int> test = { 1,2,3,4 };
 	Solution daps;
