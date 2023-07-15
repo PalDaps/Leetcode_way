@@ -53,7 +53,7 @@ public:
 //};
 
 // 6/16/2023
-// suscces
+// susccess
 //class Solution {
 //public:
 //	bool canPlaceFlowers(std::vector<int>& flowerbed, int n) {
@@ -70,14 +70,16 @@ public:
 //};
 
 // 6/16/2023
-// suscces!!
+// susccess!!
 
-// 7 / 4 /2023 SUCCES!
+// 7 / 4 /2023 SUCCESS!
 
 // 7 / 8 / 2023 NICE!
 
-// 7 / 12 / 2023 SUCCES!!!
+// 7 / 12 / 2023 SUCCESS!!!
 
+// 3 : 16 PM / 9
+// 7 / 15 / 2023 / SUCCESS
 
 int main() {
 	Solution daps;

@@ -16,7 +16,7 @@
 
 
 // after 20 min 6/16/2023
-// succes
+// success
 //class Solution {
 //public:
 //	std::string reversVowels(std::string s) {
@@ -47,7 +47,7 @@
 // FAIL!
 
 // after 30 min
-// succes!
+// success!
 //class Solution {
 //public:
 //	std::string reverseVowels(std::string s) {
@@ -69,19 +69,20 @@
 //	}
 //};
 
-// Succes!
-// succes!! 6/24/2023
+// Success!
+// success!! 6/24/2023
 
 // 7 / 4 / 2023
-// I remember both versions of the problem. The epic Succes!! 
+// I remember both versions of the problem. The epic Success!! 
 
 
 // 7 / 8 / 2023
-// Two variant is succes! 
+// Two variant is success! 
 
-// 7 / 12 / 2023 Two variant is succes!
+// 7 / 12 / 2023 Two variant is success!
 
-
+// 3 : 21 PM / 10
+// 7 / 15 / 2023 / SUCCESS
 
 class Solution {
 public:

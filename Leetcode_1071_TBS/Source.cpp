@@ -42,7 +42,7 @@ public:
 */
 
 // after a day 6/9/2023
-// succes
+// success
 /*
 class Solution {
 public:
@@ -63,7 +63,7 @@ public:
 };
 */
 
-// succes
+// success
 // 6/13/2023
 //class Solution {
 //public:
@@ -102,18 +102,19 @@ public:
 //};
 
 // 6 / 21 / 2023
-// SUCCES!!!
+// SUCCESS!!!
 
 // 7 / 4 / 2023
-// Succes!!!
+// Success!!!
 
 // 7 / 8 / 2023
-// SUCCES!!
+// SUCCESS!!
 
 // 7 / 12 / 2023
-// SUCCES!!!
+// SUCCESS!!!
 
-
+// 3 : 08 PM / 7 
+// 7 / 15 / 2023 / SUCCESS
 
 int main() {
 	Solution daps;

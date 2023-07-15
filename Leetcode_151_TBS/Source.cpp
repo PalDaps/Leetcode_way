@@ -87,9 +87,9 @@
 //    }
 //};
 
-// succes !! /6/21/2023!!!!
+// success !! /6/21/2023!!!!
 
-// succes !! 7 / 4 / 2023!;
+// success !! 7 / 4 / 2023!;
 class Solution {
 public:
     std::string reverseWords(std::string s) {
@@ -112,18 +112,60 @@ public:
         s.resize(r);
         return s;
     }
+    std::string reverseWordsWithMine(std::string s) {
+        reverseMine(s, 0, s.size() - 1);
+        int i = 0, r = 0, l = 0;
+        while (i < s.size()) {
+            while (i < s.size() && s[i] != ' ') {
+                s[r++] = s[i++];
+            }
+            if (l < r) {
+                reverseMine(s, l, r-1);
+                if (r == s.size()) return s;
+                s[r++] = ' ';
+                l = r;
+            }
+            i++;
+        }
+        if (r > 0 && s[r - 1] == ' ') r--;
+        s.resize(r);
+        return s;
+    }
+    void reverseMine(std::string& s, int i_begin, int i_end) {
+        while (i_begin < i_end) {
+            char temp = s[i_begin];
+            s[i_begin] = s[i_end];
+            s[i_end] = temp;
+            i_begin++;
+            i_end--;
+        }
+    }
+    void reverseMineS(std::string s, int index_start, int index_end) {
+        while (index_start < index_end) {
+            char temp = s[index_start];
+            s[index_start] = s[index_end];
+            s[index_end] = temp;
+            index_start++;
+            index_end--;
+        }
+        // std::cout << s;
+    }
 };
 
-// SUCCES! 7 / 8 / 2023
+// SUCCESS! 7 / 8 / 2023
 
-// 7 / 12 / 2023 SUCCES! But it I don't remember well 
+// 7 / 12 / 2023 SUCCEsS! But it I don't remember well 
 // if (r > 0 && s[r - 1] == ' ') r--;
 
+
+// 3 : 40 PM / 11
+// 7 / 15 / 2023 / SUCCESS
 int main() {
     std::string test1 = " hello world ";
     Solution daps;
-    daps.reverseWords(test1);
+    // daps.reverseWords(test1);
 	// std::cout << "HELLO!";
+    daps.reverseWordsWithMine(test1);
 	return 0;
 }
 
