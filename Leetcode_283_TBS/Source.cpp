@@ -1,6 +1,9 @@
 #include <iostream>
 #include <vector>
 
+
+// The firs collision with TBS 5 : 45 PM
+// 7 / 17 / 2023
 class Solution {
 public:
 	void moveZeroes(std::vector<int>& nums) {
@@ -15,6 +18,9 @@ public:
 		}
 	}
 };
+
+// 6 : 19 PM
+// 7 / 17 / 2023 / SUCCESS
 
 int main() {
 	std::vector<int> test = { 0, 1, 0, 3, 12 };
