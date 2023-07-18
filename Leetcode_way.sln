@@ -95,6 +95,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Leetcode_283_TBS", "Leetcod
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Leetcode_392", "Leetcode_392\Leetcode_392.vcxproj", "{02EB7049-317C-4499-9930-73A659A21FC0}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Leetcode_392_TBS_mine", "Leetcode_392_TBS_mine\Leetcode_392_TBS_mine.vcxproj", "{387C50CF-9005-4D70-97CA-BA28CC113FDD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -471,6 +473,14 @@ Global
 		{02EB7049-317C-4499-9930-73A659A21FC0}.Release|x64.Build.0 = Release|x64
 		{02EB7049-317C-4499-9930-73A659A21FC0}.Release|x86.ActiveCfg = Release|Win32
 		{02EB7049-317C-4499-9930-73A659A21FC0}.Release|x86.Build.0 = Release|Win32
+		{387C50CF-9005-4D70-97CA-BA28CC113FDD}.Debug|x64.ActiveCfg = Debug|x64
+		{387C50CF-9005-4D70-97CA-BA28CC113FDD}.Debug|x64.Build.0 = Debug|x64
+		{387C50CF-9005-4D70-97CA-BA28CC113FDD}.Debug|x86.ActiveCfg = Debug|Win32
+		{387C50CF-9005-4D70-97CA-BA28CC113FDD}.Debug|x86.Build.0 = Debug|Win32
+		{387C50CF-9005-4D70-97CA-BA28CC113FDD}.Release|x64.ActiveCfg = Release|x64
+		{387C50CF-9005-4D70-97CA-BA28CC113FDD}.Release|x64.Build.0 = Release|x64
+		{387C50CF-9005-4D70-97CA-BA28CC113FDD}.Release|x86.ActiveCfg = Release|Win32
+		{387C50CF-9005-4D70-97CA-BA28CC113FDD}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

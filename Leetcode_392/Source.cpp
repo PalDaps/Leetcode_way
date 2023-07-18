@@ -1,5 +1,10 @@
 #include <iostream>
 
+
+// The first collison with problem
+// 11 : 02 PM
+// 7 / 17 / 2023
+
 class Solution {
 public:
 	bool isSubsequence(std::string s, std::string t) {
