@@ -4,6 +4,7 @@
 
 // The firs collision with TBS 5 : 45 PM
 // 7 / 17 / 2023
+
 class Solution {
 public:
 	void moveZeroes(std::vector<int>& nums) {
@@ -26,7 +27,10 @@ public:
 // 7 / 17 / 2023 / SUCCESS
 
 // 2 : 51 PM
-// 7 / 18 / 2023 / SUCCES
+// 7 / 18 / 2023 / SUCCESS
+
+// 4 : 26 PM
+// 7 / 23 / 2023 / SUCCES
 
 int main() {
 	std::vector<int> test = { 0, 1, 0, 3, 12 };
