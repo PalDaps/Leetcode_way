@@ -22,6 +22,9 @@ public:
 // 6 : 20 PM / After a 18 minute
 // 7 / 22 / 2023 / SUCCESS
 
+// 4 : 20 PM / After a day
+// 7 / 23 / 2023 / SUCCESS
+
 int main() {
 	return 0;
 }
