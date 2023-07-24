@@ -26,7 +26,12 @@ public:
 // 7 / 15 / 2023 / SUCCESS
 
 // 6 : 18 PM
-// 7 / 17 / 2023 / SUCCES
+// 7 / 17 / 2023 / SUCCESS
+
+// 12 : 20 PM
+// 7 / 24 / 2023 / SUCCESS
+// I remember, but I still don't understand the meaning of this solution
+
 int main() {
 	std::cout << "HELLO, world!";
 	return 0;

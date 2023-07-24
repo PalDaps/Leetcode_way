@@ -35,6 +35,10 @@ public:
 	}
 };
 
+// 12 : 00 PM
+// 7 / 24 / 2024 / The failure
+// res = std::max(res, (pre[i] - pre[i-k])*1.0/k);
+
 int main() {
 	std::vector<int> test1 = { 1,12,-5,-6,50,3, -30, 25 };
 	Solution daps;

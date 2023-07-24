@@ -26,14 +26,18 @@ public:
 
 // need after 15 min repeat this nice solution
 
-// SUCCES!But it went hard.
+// SUCCESS!But it went hard.
 
-// after a 5 hour 7 / 8 / 2023 SUCCES!
+// after a 5 hour 7 / 8 / 2023 SUCCESS!
 
 // 7 / 12 / 2023 The failure!
 
-// 7 / 12 / 2023 The SUCces!
+// 7 / 12 / 2023 The SUCcesS!
 
 // 4 : 12 PM / 13
-// 7 / 15 / 2023 / SUCCES!
+// 7 / 15 / 2023 / SUCCESS!
+
+// 12 : 30 PM
+// 7 / 24 / 2023 / SUCCESS
+// but i forgot '++' in chars[iRes++] = tempChar;
 
