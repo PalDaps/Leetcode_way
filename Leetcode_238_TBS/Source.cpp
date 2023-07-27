@@ -27,19 +27,19 @@
 // 7 / 8 / 2023
 // THE FAILURE!
 
-class Solution {
-public:
-    std::vector<int> productExceptSelf(std::vector<int>& nums) {
-        std::vector<int> res(nums.size(), 1);
-        for (int i = 0, pre = 1, suf = 1, n = nums.size(); i < n; i++) {
-            res[i] *= pre;
-            pre *= nums[i];
-            res[n - 1 - i] *= suf;
-            suf *= nums[n - 1 - i];
-        }
-        return res;
-    }
-};
+//class Solution {
+//public:
+//    std::vector<int> productExceptSelf(std::vector<int>& nums) {
+//        std::vector<int> res(nums.size(), 1);
+//        for (int i = 0, pre = 1, suf = 1, n = nums.size(); i < n; i++) {
+//            res[i] *= pre;
+//            pre *= nums[i];
+//            res[n - 1 - i] *= suf;
+//            suf *= nums[n - 1 - i];
+//        }
+//        return res;
+//    }
+//};
 
 // after an hour checked and try to solve this problem. And it was a success!
 // 7 / 8 / 2023
@@ -51,6 +51,25 @@ public:
 
 // 12 : 24 PM 
 // 7 / 24 / 2023 / SUCCESS
+
+// 11 : 45 / 14
+// 7 / 26 / 2023 / SUCCESS
+
+
+class Solution {
+public:
+    std::vector<int> productExceptSelf(std::vector<int> nums) {
+        std::vector<int> res(nums.size(), 1);
+        for (int i = 0, pre = 1, suf = 1, n = nums.size(); i < n; i++) {
+            res[i] *= pre;
+            pre *= nums[i];
+            res[n - 1 - i] *= suf;
+            suf *= nums[n - 1 - i];
+        }
+        return res;
+    }
+};
+
 
 int main() {
 	std::vector<int> test = { 1,2,3,4 };

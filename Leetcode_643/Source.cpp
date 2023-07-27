@@ -17,27 +17,48 @@
 // 5 : 58  PM
 // It seems like this is a very weak solution
 
+//class Solution {
+//public:
+//	double findMaxAverage(std::vector<int>& nums, int k) {
+//		std::vector<int> sum(nums.size(), 0);
+//		sum[0] = nums[0];
+//		for (int i = 1; i < nums.size(); i++) {
+//			sum[i] = sum[i-1] + nums[i]; 
+//		}
+////		for (auto i : sum)
+////		std::cout << i << " ";
+//		double sum_of = sum[k - 1] * 1.0 / k;
+//		for (int i = k; i < nums.size(); i++) {
+//			sum_of = std::max(sum_of, (sum[i] - sum[i - k])*1.0/k);
+//		}
+//		return sum_of;
+//	}
+//};
+
+// 12 : 00 PM
+// 7 / 24 / 2023 / The failure
+// res = std::max(res, (pre[i] - pre[i-k])*1.0/k);
+
+
+// 12 : 24 / 25
+// 7 / 27 / 2023 / SUCCESS
+// I made 2 stupid mistakes. i <= nums.size() instead of i < nums.size(); and i = 1 instead of i = k
+
 class Solution {
 public:
 	double findMaxAverage(std::vector<int>& nums, int k) {
-		std::vector<int> sum(nums.size(), 0);
-		sum[0] = nums[0];
+		std::vector<int> res(nums.size(), 1);
+		res[0] = nums[0];
 		for (int i = 1; i < nums.size(); i++) {
-			sum[i] = sum[i-1] + nums[i]; 
+			res[i] = res[i - 1] + nums[i];
 		}
-//		for (auto i : sum)
-//		std::cout << i << " ";
-		double sum_of = sum[k - 1] * 1.0 / k;
+		double ave = res[k - 1] * 1.0 / k;
 		for (int i = k; i < nums.size(); i++) {
-			sum_of = std::max(sum_of, (sum[i] - sum[i - k])*1.0/k);
+			ave = std::max(ave, (res[i] - res[i - k]) * 1.0 / k);
 		}
-		return sum_of;
+		return ave;
 	}
 };
-
-// 12 : 00 PM
-// 7 / 24 / 2024 / The failure
-// res = std::max(res, (pre[i] - pre[i-k])*1.0/k);
 
 int main() {
 	std::vector<int> test1 = { 1,12,-5,-6,50,3, -30, 25 };

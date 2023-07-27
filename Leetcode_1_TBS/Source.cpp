@@ -100,6 +100,25 @@
 // 4 : 27 PM
 // 7 / 19 / 2023 / SUCCESS!
 
+// 9 : 26 AM / 1
+// 7 / 26 / 2023 / SUCCESS
+// In the train 
+
+class Solution {
+public:
+	std::vector<int> twoSum(std::vector<int>& nums, int target) {
+		std::unordered_map<int, int> map;
+		for (int i = 0; i < nums.size(); i++) {
+			int delta = target - nums[i];
+			if (map.count(delta)) {
+				return { map[delta], i };
+			}
+			map[nums[i]] = i;
+		}
+		return {};
+	}
+};
+
 int main()
 {
 	Solution daps;

@@ -90,67 +90,67 @@
 // success !! /6/21/2023!!!!
 
 // success !! 7 / 4 / 2023!;
-class Solution {
-public:
-    std::string reverseWords(std::string s) {
-        std::reverse(s.begin(), s.end());
-        int i = 0, n = s.size();
-        int r = 0, l = 0;
-        while (i < n) {
-            while (i < n && s[i] != ' ') {
-                s[r++] = s[i++];
-            }
-            if (l < r) {
-                std::reverse(s.begin() + l, s.begin() + r);
-                if (r == n) break;
-                s[r++] = ' ';
-                l = r;
-            }
-            i++;
-        }
-        if (r > 0 && s[r - 1] == ' ') r--;
-        s.resize(r);
-        return s;
-    }
-    std::string reverseWordsWithMine(std::string s) {
-        reverseMine(s, 0, s.size() - 1);
-        int i = 0, r = 0, l = 0;
-        while (i < s.size()) {
-            while (i < s.size() && s[i] != ' ') {
-                s[r++] = s[i++];
-            }
-            if (l < r) {
-                reverseMine(s, l, r-1);
-                if (r == s.size()) return s;
-                s[r++] = ' ';
-                l = r;
-            }
-            i++;
-        }
-        if (r > 0 && s[r - 1] == ' ') r--;
-        s.resize(r);
-        return s;
-    }
-    void reverseMine(std::string& s, int i_begin, int i_end) {
-        while (i_begin < i_end) {
-            char temp = s[i_begin];
-            s[i_begin] = s[i_end];
-            s[i_end] = temp;
-            i_begin++;
-            i_end--;
-        }
-    }
-    void reverseMineS(std::string s, int index_start, int index_end) {
-        while (index_start < index_end) {
-            char temp = s[index_start];
-            s[index_start] = s[index_end];
-            s[index_end] = temp;
-            index_start++;
-            index_end--;
-        }
-        // std::cout << s;
-    }
-};
+//class Solution {
+//public:
+//    std::string reverseWords(std::string s) {
+//        std::reverse(s.begin(), s.end());
+//        int i = 0, n = s.size();
+//        int r = 0, l = 0;
+//        while (i < n) {
+//            while (i < n && s[i] != ' ') {
+//                s[r++] = s[i++];
+//            }
+//            if (l < r) {
+//                std::reverse(s.begin() + l, s.begin() + r);
+//                if (r == n) break;
+//                s[r++] = ' ';
+//                l = r;
+//            }
+//            i++;
+//        }
+//        if (r > 0 && s[r - 1] == ' ') r--;
+//        s.resize(r);
+//        return s;
+//    }
+//    std::string reverseWordsWithMine(std::string s) {
+//        reverseMine(s, 0, s.size() - 1);
+//        int i = 0, r = 0, l = 0;
+//        while (i < s.size()) {
+//            while (i < s.size() && s[i] != ' ') {
+//                s[r++] = s[i++];
+//            }
+//            if (l < r) {
+//                reverseMine(s, l, r-1);
+//                if (r == s.size()) return s;
+//                s[r++] = ' ';
+//                l = r;
+//            }
+//            i++;
+//        }
+//        if (r > 0 && s[r - 1] == ' ') r--;
+//        s.resize(r);
+//        return s;
+//    }
+//    void reverseMine(std::string& s, int i_begin, int i_end) {
+//        while (i_begin < i_end) {
+//            char temp = s[i_begin];
+//            s[i_begin] = s[i_end];
+//            s[i_end] = temp;
+//            i_begin++;
+//            i_end--;
+//        }
+//    }
+//    void reverseMineS(std::string s, int index_start, int index_end) {
+//        while (index_start < index_end) {
+//            char temp = s[index_start];
+//            s[index_start] = s[index_end];
+//            s[index_end] = temp;
+//            index_start++;
+//            index_end--;
+//        }
+//        // std::cout << s;
+//    }
+//};
 
 // SUCCESS! 7 / 8 / 2023
 
@@ -164,13 +164,50 @@ public:
 // 12 : 15 PM
 // 7 / 24 / 2023 / SUCCESS
 
+// 10 : 18 AM / 7
+// 7 / 26 / 2023 / SUCCESS
+
+
+class Solution {
+public:
+    std::string reverseWords(std::string str) {
+        reverseMine(str, 0, str.size() - 1);
+        int n = str.size(), l = 0, r = 0, i = 0;
+        while (i < n) {
+            while (i < n && str[i] != ' ') {
+                str[r++] = str[i++];
+            }
+            if (l < r) {
+                reverseMine(str, l, r-1);
+                if (r == n) return str;
+                str[r++] = ' ';
+                l = r;
+            }
+            i++;
+        }
+        if (r > 0 && str[r - 1] == ' ') r--;
+        str.resize(r);
+        return str;
+    }
+
+    void reverseMine(std::string& str, int begin, int end) {
+        while (begin < end) {
+            char temp = str[begin];
+            str[begin] = str[end];
+            str[end] = temp;
+            begin++;
+            end--;
+        }
+    }
+};
+
 
 int main() {
     std::string test1 = " hello world ";
     Solution daps;
-    // daps.reverseWords(test1);
+    std::cout << daps.reverseWords(test1);
 	// std::cout << "HELLO!";
-    daps.reverseWordsWithMine(test1);
+    // daps.reverseWordsWithMine(test1);
 	return 0;
 }
 

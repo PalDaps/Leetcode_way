@@ -39,6 +39,24 @@
 // 4 : 48 PM / 20
 // 7 / 15 / 2023 / SUCCESS
 
+// 11 : 52 AM / 15
+// 7 / 26 / 2023 / SUCCESS
+// But i make a mistake in line if (nums[i - 1] == nums[i]) c++;
+
+class Solution {
+public:
+	int removeDuplicates(std::vector<int>& nums) {
+		int c = 0;
+		for (int i = 1; i < nums.size(); i++) {
+			if (nums[i - 1] == nums[i]) c++;
+			else nums[i - c] = nums[i];
+		}
+		for (auto i : nums)
+			std::cout << i << " ";
+		return nums.size() - c;
+	}
+};
+
 
 
 int main()

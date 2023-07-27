@@ -116,6 +116,24 @@ public:
 // 3 : 08 PM / 7 
 // 7 / 15 / 2023 / SUCCESS
 
+// 9 : 28 AM / 2
+// 7 / 26 / 2023 / SUCCESS
+// In the Train
+
+class Solution {
+public:
+	std::string gcdOfStrings(std::string str1, std::string str2) {
+		int ost = 1, a = str1.size(), b = str2.size();
+		if (a > b) std::swap(a, b);
+		while (ost > 0) {
+			ost = b % a;
+			b = a;
+			a = ost;
+		}
+		return str1 + str2 == str2 + str1 ? str1.substr(0, b) : "";
+	}
+};
+
 int main() {
 	Solution daps;
 	std::string str1 = "ABCABC";

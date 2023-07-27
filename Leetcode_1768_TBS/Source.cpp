@@ -146,6 +146,21 @@ public:
 // 3 : 03 PM / 6
 // 7 / 15 / 2023 / SUCCES
 
+// 10 : 30 AM / 9
+// 7 / 26 / 2023 / SUCCESS
+
+class Solution {
+public:
+	std::string mergeAlternately(std::string str1, std::string str2) {
+		int n = str1.size(), m = str2.size(), i = 0, j = 0;
+		std::string res = "";
+		while (i < n || j < m) {
+			if (i < n) res += str1[i++];
+			if (j < m) res += str2[j++];
+		}
+		return res;
+	}
+};
 int main() {
 	std::string a = "abc", b = "pq";
 	Solution daps;

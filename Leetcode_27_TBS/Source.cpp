@@ -1,23 +1,23 @@
 #include <iostream>
 #include <vector>
 
-class Solution
-{
-public:
-	int removeElement(std::vector<int>& nums, int val)
-	{
-		int count = 0;
-		for (int i = 0; i < nums.size(); i++)
-		{
-			if (nums[i] != val)
-			{
-				nums[count++] = nums[i];
-				// count++;
-			}
-		}
-		return count;
-	}
-};
+//class Solution
+//{
+//public:
+//	int removeElement(std::vector<int>& nums, int val)
+//	{
+//		int count = 0;
+//		for (int i = 0; i < nums.size(); i++)
+//		{
+//			if (nums[i] != val)
+//			{
+//				nums[count++] = nums[i];
+//				// count++;
+//			}
+//		}
+//		return count;
+//	}
+//};
 
 // 7 / 10 / 2023 Remember The failure.
 
@@ -40,6 +40,20 @@ public:
 
 // 4 : 51 PM / 21
 // 7 / 15 / 2023 / SUCCESS
+
+// 11 : 59 AM / 16
+// 7 / 26 / 2023 / SUCCESS
+
+class Solution {
+public:
+	int removeElement(std::vector<int>& nums, int target) {
+		int c = 0;
+		for (int i = 0; i < nums.size(); i++) {
+			if (nums[i] != target) nums[c++] = nums[i];
+		}
+		return c;
+	}
+};
 
 int main()
 {

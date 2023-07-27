@@ -1,17 +1,17 @@
 #include <iostream>
 
-class Solution {
-public:
-	int hammingWeight(uint32_t n) {
-		int counter = 0;
-		for (int i = 0; i < 32; i++) {
-			uint32_t temp = n;
-			temp = temp >> i;
-			counter = counter + (temp & 1);
-		}
-		return counter;
-	}
-};
+//class Solution {
+//public:
+//	int hammingWeight(uint32_t n) {
+//		int counter = 0;
+//		for (int i = 0; i < 32; i++) {
+//			uint32_t temp = n;
+//			temp = temp >> i;
+//			counter = counter + (temp & 1);
+//		}
+//		return counter;
+//	}
+//};
 
 
 // remembers it 7 / 4 /2023 Success!;
@@ -20,6 +20,23 @@ public:
 
 // 2 : 59 PM / 5
 // 7 / 15 / 2023 / SUCCESS!
+
+// 11 : 10 AM / 11
+// 7 / 26 / 2023 / SUCCESS
+
+
+class Solution {
+public:
+	int hammingWeight(uint32_t n) {
+		int c = 0;
+		for (int i = 0; i < 32; i++) {
+			uint32_t temp = n;
+			temp >>= i;
+			c += (temp & 1);
+		}
+		return c;
+	}
+};
 
 int main() {
 	uint32_t n = 0b1100;

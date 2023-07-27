@@ -71,27 +71,27 @@
 
 
 // 7 / 7 / 2023 SUCCESS!
-class Solution {
-public:
-    int romanToInt(std::string s) {
-        std::unordered_map<char, int> map = { {'I', 1},
-                                             {'V', 5},
-                                             {'X', 10},
-                                             {'L', 50},
-                                             {'C', 100},
-                                             {'D', 500},
-                                             {'M', 1000} };
-        int sum = map[s.back()];
-        for (int i = s.size() - 2; i >= 0; i--) {
-            if (map[s[i]] < map[s[i + 1]])
-                sum -= map[s[i]];
-            else
-                sum += map[s[i]];
-        }
-        return sum;
-
-    }
-};
+//class Solution {
+//public:
+//    int romanToInt(std::string s) {
+//        std::unordered_map<char, int> map = { {'I', 1},
+//                                             {'V', 5},
+//                                             {'X', 10},
+//                                             {'L', 50},
+//                                             {'C', 100},
+//                                             {'D', 500},
+//                                             {'M', 1000} };
+//        int sum = map[s.back()];
+//        for (int i = s.size() - 2; i >= 0; i--) {
+//            if (map[s[i]] < map[s[i + 1]])
+//                sum -= map[s[i]];
+//            else
+//                sum += map[s[i]];
+//        }
+//        return sum;
+//
+//    }
+//};
 
 // 7 / 9 / 2023 / SUCCESS!
 
@@ -99,6 +99,30 @@ public:
 
 // 4 : 28 PM / 16
 // 7 / 15 / 2023 / SUCCESS
+
+// 9 : 52 AM / 4
+// 7 / 26 / 2023 / SUCCESS
+// but intsted of it map[s[i]] < map[s[i + 1]], i do it s[i] < s[i+1]
+
+class Solution {
+public: 
+    int romanToInt(std::string s) {
+		std::unordered_map<char, int> map = { 
+			{'I', 1}, 
+			{'V', 5}, 
+			{'X', 10}, 
+			{'L', 50}, 
+			{'C', 100}, 
+			{'D', 500}, 
+			{'M', 1000}};
+		int sum = map[s.back()];
+		for (int i = s.size() - 2; i >= 0; i--) {
+			if (map[s[i]] < map[s[i + 1]]) sum -= map[s[i]];
+			else sum += map[s[i]];
+		}
+		return sum;
+    }
+};
 
 int main() {
 	Solution daps;

@@ -45,27 +45,45 @@
 
 // 7 / 7 / 2023 SUCCES!
 
-class Solution {
-public:
-    std::string longestCommonPrefix(std::vector<std::string>& strs) {
-        std::sort(strs.begin(), strs.end());
-        std::string first = strs[0];
-        std::string last = strs[strs.size() - 1];
-        std::string res = "";
-        for (int i = 0; i < std::min(first.size(), last.size()); i++) {
-            if (first[i] == last[i])
-                res += first[i];
-            else break;
-        }
-        return res;
-    }
-};
+//class Solution {
+//public:
+//    std::string longestCommonPrefix(std::vector<std::string>& strs) {
+//        std::sort(strs.begin(), strs.end());
+//        std::string first = strs[0];
+//        std::string last = strs[strs.size() - 1];
+//        std::string res = "";
+//        for (int i = 0; i < std::min(first.size(), last.size()); i++) {
+//            if (first[i] == last[i])
+//                res += first[i];
+//            else break;
+//        }
+//        return res;
+//    }
+//};
 
 
 // 7 / 12 / 2023 / SUCCESS!
 
 // 4 : 33 PM / 17
 // 7 / 15 / 2023 / SUCCESS
+
+// 10 : 00 AM / 5
+// 7 / 26 / 2023 / SUCCESS
+
+class Solution {
+public:
+    std::string longestCommonPrefix(std::vector<std::string>& str) {
+        std::sort(str.begin(), str.end());
+		std::string f = str[0];
+		std::string l = str[str.size() - 1];
+		std::string res = "";
+		for (int i = 0; i < std::min(f.size(), l.size()); i++) {
+			if (f[i] == l[i]) res += f[i];
+			else break;
+		}
+		return res;
+    }
+};
 
 int main()
 {

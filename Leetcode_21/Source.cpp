@@ -113,6 +113,51 @@ struct ListNode
 // after a day. I remember it, but i cought this rofl mistake:
 // curr->next == list1 xDDDDDDDDDDDDDDD 20 min is waste
 
+//class Solution {
+//public:
+//	ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
+//		ListNode res(0);
+//		ListNode* curr = &res;
+//		while (true) {
+//			if (list1 == nullptr && list2 == nullptr) {
+//				return res.next;
+//			}
+//			else if (list1 == nullptr) {
+//				curr->next = list2;
+//				return res.next;
+//			}
+//			else if (list2 == nullptr) {
+//				curr->next = list1;
+//				return res.next;
+//			}
+//			else {
+//				if (list1->val < list2->val) {
+//					curr->next = list1;
+//					list1 = list1->next;
+//					curr = curr->next;
+//				}
+//				else {
+//					curr->next = list2;
+//					list2 = list2->next;
+//					curr = curr->next;
+//				}
+//			}
+//
+//		}
+//	}
+//};
+
+// SUCCESS 7 / 10 / 2023
+
+// 7 / 12 / 2023 / SUCCESS!
+
+// 4 : 45 PM / 19
+// 7 / 15 / 2023 / SUCCESS
+
+// 11 : 31 AM / 13
+// 7 / 26 / 2023 / 50% - 50% SUCCESS
+// i returned curr->next instead of res.next
+
 class Solution {
 public:
 	ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
@@ -142,17 +187,9 @@ public:
 					curr = curr->next;
 				}
 			}
-
 		}
 	}
 };
-
-// SUCCESS 7 / 10 / 2023
-
-// 7 / 12 / 2023 / SUCCESS!
-
-// 4 : 45 PM / 19
-// 7 / 15 / 2023 / SUCCESS
 
 int main()
 {

@@ -30,3 +30,27 @@ public:
 
 // 12 : 05 PM
 // 7 / 24 / 2023 / SUCCESS
+
+// 9 : 36 AM / 3
+// 7 / 26 / 2023 / SUCCESS
+// In the train
+
+class Solution {
+public:
+	int maxArea(std::vector<int>& height) {
+		int l = 0;
+		int r = height.size() - 1;
+		int sq = 0;
+		while (l < r) {
+			sq = std::max(sq, (r - l) * std::min(height[l], height[r]));
+			if (height[l] < height[r]) l++;
+			else r--;
+		}
+		return sq;
+
+	}
+};
+
+int main() {
+	return 0;
+}

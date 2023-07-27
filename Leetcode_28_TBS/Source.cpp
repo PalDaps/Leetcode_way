@@ -1,17 +1,17 @@
 #include <iostream>
 
-class Solution {
-public:
-	int strStr(std::string haystack, std::string needle) {
-		for (int i = 0; ; i++) {
-			for (int j = 0; ; j++) {
-				if (j == needle.size()) return i;
-				if (i + j == haystack.size()) return -1;
-				if (needle[j] != haystack[i + j]) break;
-			}
-		}
-	}
-};
+//class Solution {
+//public:
+//	int strStr(std::string haystack, std::string needle) {
+//		for (int i = 0; ; i++) {
+//			for (int j = 0; ; j++) {
+//				if (j == needle.size()) return i;
+//				if (i + j == haystack.size()) return -1;
+//				if (needle[j] != haystack[i + j]) break;
+//			}
+//		}
+//	}
+//};
 
 // after a 5 minute 7 : 00 PM
 // 7 / 14 / 2023 / SUCCESS!
@@ -25,6 +25,22 @@ public:
 
 // 6 : 15 PM
 // 7 / 17 / 2023 / SUCCESS
+
+// 12 : 05 PM / 17
+// 7 / 26 / 2023 / SUCCESS
+
+class Solution {
+public:
+	int strStr(std::string haystack, std::string needle) {
+		for (int i = 0; ; i++) {
+			for (int j = 0; ; j++) {
+				if (j == needle.size()) return i;
+				else if (i + j == haystack.size()) return -1;
+				else if (needle[j] != haystack[i + j]) break;
+			}
+		}
+	}
+};
 
 int main() {
 	Solution daps;
