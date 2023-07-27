@@ -31,6 +31,10 @@
 // 12 : 54 PM / 19
 // 7 / 26 / 2023 / SUCCESS
 
+// 3 : 14 PM
+// 7 / 27 / 2023 / I understood the meaning of this decision
+// I understood the meaning of this decision
+
 class Solution {
 public:
 	bool increasingTripltet(std::vector<int> nums) {
