@@ -24,6 +24,10 @@ public:
 	}
 };
 
+// 4 : 46 PM
+// 7 / 27 / 2023 / I felt like the link was saving me from memory, 
+// but now another problem Time Limit Exceeded
+
 int main() {
 	std::string test = "abciiidef";
 	std::string test2 = "weallloveyou";
