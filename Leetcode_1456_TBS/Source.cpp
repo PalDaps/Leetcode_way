@@ -6,18 +6,48 @@
 // I think I understood the meaning of the solution
 // need after a 5 minute repeat
 
+//class Solution {
+//public:
+//	int vowels[26] = { 1,0,0,0,1,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,1 };
+//	int maxVowels(std::string s, int k) {
+//		int max_vow = 0;
+//		for (auto i = 0, curr_vow = 0; i < s.size(); i++) {
+//			curr_vow += vowels[s[i] - 'a'];
+//			if (i >= k) {
+//				curr_vow -= vowels[s[i] - 'a'];
+//			}
+//			max_vow = std::max(max_vow, curr_vow);
+//		}
+//		return max_vow;
+//	}
+//};
+
+// 3 : 16 PM
+// 7 / 28 / 2023 / The failure
+// And if you skip the repetition after 5 minutes and after an hour, 
+// then after a day it is already difficult to restore the solution.
+// i forgot the curr_vow -= vowels[s[i-k] - 'a'];
+
 class Solution {
 public:
-	int vowels[26] = { 1,0,0,0,1,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,1 };
-	int maxVowels(std::string s, int k) {
-		int max_vow = 0;
-		for (auto i = 0, curr_vow = 0; i < s.size(); i++) {
-			curr_vow += vowels[s[i] - 'a'];
-			if (i >= k) {
-				curr_vow -= vowels[s[i] - 'a'];
-			}
-			max_vow = std::max(max_vow, curr_vow);
-		}
-		return max_vow;
-	}
+    int vowels[26] = { 1,0,0,0,1,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,1 };
+    int maxVowels(std::string s, int k) {
+        int sum = 0;
+        for (int i = 0, curr_vow = 0; i < s.size(); i++) {
+            curr_vow += vowels[s[i] - 'a'];
+            if (i >= k) {
+                curr_vow -= vowels[s[i - k] - 'a'];
+            }
+            sum = std::max(sum, curr_vow);
+        }
+        return sum;
+    }
 };
+
+
+int main() {
+    std::string test = "abciiidef";
+    Solution daps;
+    daps.maxVowels(test, 3);
+    return 0;
+}
