@@ -32,6 +32,11 @@ public:
 	}
 };
 
+// 5 : 02 PM
+// 7 / 28 / 2023 / SUCCESS
+// The beast solution
+
+
 int main() {
 	std::cout << "HELLO!" << std::endl;
 	std::vector<int> test = { 1,1,1,0,0,0,1,1,1,1,0 };

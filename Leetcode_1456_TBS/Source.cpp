@@ -28,24 +28,43 @@
 // then after a day it is already difficult to restore the solution.
 // i forgot the curr_vow -= vowels[s[i-k] - 'a'];
 
+//class Solution {
+//public:
+//    int vowels[26] = { 1,0,0,0,1,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,1 };
+//    int maxVowels(std::string s, int k) {
+//        int sum = 0;
+//        for (int i = 0, curr_vow = 0; i < s.size(); i++) {
+//            curr_vow += vowels[s[i] - 'a'];
+//            if (i >= k) {
+//                curr_vow -= vowels[s[i - k] - 'a'];
+//            }
+//            sum = std::max(sum, curr_vow);
+//        }
+//        return sum;
+//    }
+//};
+
+// 3 : 36 PM / after a 5 minute
+// 7 / 28 / 2023 / SUCCESS
+
 class Solution {
 public:
     int vowels[26] = { 1,0,0,0,1,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,1 };
     int maxVowels(std::string s, int k) {
-        int sum = 0;
-        for (int i = 0, curr_vow = 0; i < s.size(); i++) {
+        int max = 0;
+        for (int i = 0, curr_vow; i < s.size(); i++) {
             curr_vow += vowels[s[i] - 'a'];
-            if (i >= k) {
+            if (i >= k)
                 curr_vow -= vowels[s[i - k] - 'a'];
-            }
-            sum = std::max(sum, curr_vow);
+            max = std::max(max, curr_vow);
         }
-        return sum;
+        return max;
     }
 };
 
-// 3 : 36 PM / after a 5 minute
+// 5 : 00 PM 
 // 7 / 28 / 2023 / SUCCESS
+
 
 
 int main() {
