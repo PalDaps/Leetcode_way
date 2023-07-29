@@ -26,9 +26,48 @@
 // 2 : 42 PM / after a 30 minute
 // 7 / 27 / 2023 / SUCCESS
 
+// 11 : 38 / after a 2 day
+// 7 / 29 / 2023 / The failure
+// Mixed in memory with a non-TBS solution and it's over
+
+// 11 : 58 / after a 30 min after failure
+// 7 / 29 / 2023 / the failure
+
+//class A {
+//public:
+//	virtual void test() {
+//		before();
+//		std::cout << "test() from class A" << std::endl;
+//		after();
+//	}
+//
+//	virtual void before() {
+//		// std::cout << "before() from class A" << std::endl;
+//	}
+//
+//	virtual void after() {
+//		// std::cout << "after() from class A" << std::endl;
+//	}
+//};
+
+//class B : public A {
+//public:
+//	void caller() {
+//		test();
+//	}
+//	void before() override {
+//		std::cout << "before() from class B" << std::endl;
+//	}
+//	void after() override {
+//		std::cout << "after() from class B" << std::endl;
+//	}
+//};
+
 int main() {
-	Solution daps;
+	// Solution daps;
 	std::vector<int> test = {1, 12, 4, 5};
-	std::cout << daps.findMaxAverage(test, 2);
+	// std::cout << daps.findMaxAverage(test, 2);
+	//B b;
+	//b.caller();
 	return 0;
 }
