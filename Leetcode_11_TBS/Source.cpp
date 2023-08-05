@@ -35,6 +35,14 @@ public:
 // 7 / 26 / 2023 / SUCCESS
 // In the train
 
+// 11 : 02 PM / after a two week
+// 8 / 5 / 2023 / SUCCESS
+// Perfect!
+
+// 10 : 58 PM / after a two week
+// 8 / 5 / 2023 / SUCCESS
+// I remember this task and the essence of its solution perfectly
+
 class Solution {
 public:
 	int maxArea(std::vector<int>& height) {

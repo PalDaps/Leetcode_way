@@ -35,24 +35,12 @@ public:
 // 10 : 37 AM / 10
 // 7 / 26 / 2023 / SUCCESS
 
+// 12 : 16 AM / after a two week
+// 8 / 6 / 2023 / SUCCESS
+
 class Solution {
 public:
-	void rotate(std::vector<int>& nums, int k) {
-		k %= nums.size();
-		reverseMine(nums, 0, nums.size() - 1);
-		reverseMine(nums, 0, k - 1);
-		reverseMine(nums, k, nums.size() - 1);
-	}
 
-	void reverseMine(std::vector<int>& nums, int begin, int end) {
-		while (begin < end) {
-			int temp = nums[begin];
-			nums[begin] = nums[end];
-			nums[end] = temp;
-			begin++;
-			end--;
-		}
-	}
 };
 int main() {
 	std::cout << "HELLO, world!";

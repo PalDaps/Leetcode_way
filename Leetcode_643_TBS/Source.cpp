@@ -26,12 +26,19 @@
 // 2 : 42 PM / after a 30 minute
 // 7 / 27 / 2023 / SUCCESS
 
-// 11 : 38 / after a 2 day
+// 11 : 38 AM / after a 2 day
 // 7 / 29 / 2023 / The failure
 // Mixed in memory with a non-TBS solution and it's over
 
-// 11 : 58 / after a 30 min after failure
+// 11 : 58 AM / after a 30 min after failure
 // 7 / 29 / 2023 / the failure
+
+// 10 : 45 PM / after a week
+// 8 / 5 / 2023 / The failure
+// Need the repeat tomorrow
+
+// 11 : 29 PM / after an hour
+// 8 / 5 / 2023 / SUCCESS
 
 //class A {
 //public:

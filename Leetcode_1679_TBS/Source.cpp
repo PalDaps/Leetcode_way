@@ -30,6 +30,11 @@
 // 10 : 24 AM / 8
 // 7 / 26 / 2023 / SUCCESS
 
+// 10 : 53 PM / after a two week
+// 8 / 5 / 2023 / SUCCESS
+// I still don't understand the meaning of this solution to the problem
+
+
 class Solution {
 public:
 	int maxOperations(std::vector<int>& nums, int k) {
