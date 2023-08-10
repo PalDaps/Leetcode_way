@@ -40,6 +40,10 @@
 // 11 : 29 PM / after an hour
 // 8 / 5 / 2023 / SUCCESS
 
+// 11 : 09 PM
+// 8 / 10 / 2023 / The failure
+// I forgot to divide by k
+
 //class A {
 //public:
 //	virtual void test() {
