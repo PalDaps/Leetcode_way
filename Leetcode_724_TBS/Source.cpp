@@ -5,6 +5,10 @@
 // 6 : 57 PM
 // 8 / 17 / 2023
 // This is a genius solution
+
+// 20 : 25 PM
+// 21 / 08 / 2023 / SUCCESS
+
 class Solution {
 	int pivotIndex(std::vector<int>& nums) {
 		int lSum = 0;
