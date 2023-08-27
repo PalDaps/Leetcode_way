@@ -43,6 +43,9 @@ public:
 // 8 / 5 / 2023 / SUCCESS
 // I remember this task and the essence of its solution perfectly
 
+// 23 : 12 PM
+// 27 / 08 / 2023 / SUCCESS
+
 class Solution {
 public:
 	int maxArea(std::vector<int>& height) {
