@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.33214.272
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34009.444
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Leetcode_way_1480", "Leetcode_way\Leetcode_way.vcxproj", "{25A84B41-0429-4D9F-8654-FC3501D210DB}"
 EndProject
@@ -128,6 +128,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Leetcode_1732_TBS", "Leetcode_1732_TBS\Leetcode_1732_TBS.vcxproj", "{88E8DFB8-4F84-4701-BA87-16D1B2A871B6}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Leetcode_724_TBS", "Leetcode_724_TBS\Leetcode_724_TBS.vcxproj", "{A3CF2FEC-6265-4003-BCC4-CE57E07743DE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Leetcode_1207", "Leetcode_1207\Leetcode_1207.vcxproj", "{353D0E1F-55A1-4EC7-807C-D00ECDD313E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -641,6 +643,14 @@ Global
 		{A3CF2FEC-6265-4003-BCC4-CE57E07743DE}.Release|x64.Build.0 = Release|x64
 		{A3CF2FEC-6265-4003-BCC4-CE57E07743DE}.Release|x86.ActiveCfg = Release|Win32
 		{A3CF2FEC-6265-4003-BCC4-CE57E07743DE}.Release|x86.Build.0 = Release|Win32
+		{353D0E1F-55A1-4EC7-807C-D00ECDD313E3}.Debug|x64.ActiveCfg = Debug|x64
+		{353D0E1F-55A1-4EC7-807C-D00ECDD313E3}.Debug|x64.Build.0 = Debug|x64
+		{353D0E1F-55A1-4EC7-807C-D00ECDD313E3}.Debug|x86.ActiveCfg = Debug|Win32
+		{353D0E1F-55A1-4EC7-807C-D00ECDD313E3}.Debug|x86.Build.0 = Debug|Win32
+		{353D0E1F-55A1-4EC7-807C-D00ECDD313E3}.Release|x64.ActiveCfg = Release|x64
+		{353D0E1F-55A1-4EC7-807C-D00ECDD313E3}.Release|x64.Build.0 = Release|x64
+		{353D0E1F-55A1-4EC7-807C-D00ECDD313E3}.Release|x86.ActiveCfg = Release|Win32
+		{353D0E1F-55A1-4EC7-807C-D00ECDD313E3}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
