@@ -104,6 +104,11 @@
 // 7 / 26 / 2023 / SUCCESS
 // but intsted of it map[s[i]] < map[s[i + 1]], i do it s[i] < s[i+1]
 
+// 15 : 37 PM
+// 01 / 09 / 2023 / The failure
+// I forgot these lines map[s[i+1]] > map[s[i]] ... sum -= map[s[i]]
+// ... sum += map[s[i]];
+
 class Solution {
 public: 
     int romanToInt(std::string s) {
