@@ -158,6 +158,12 @@ struct ListNode
 // 7 / 26 / 2023 / 50% - 50% SUCCESS
 // i returned curr->next instead of res.next
 
+// 13 : 23 PM
+// 03 / 09 / 2023 / The failure
+
+// 19 : 37 PM
+// 04 / 09 / 2023 / SUCCESS
+
 class Solution {
 public:
 	ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
