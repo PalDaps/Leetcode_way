@@ -43,6 +43,9 @@
 // 7 / 26 / 2023 / SUCCESS
 // But i make a mistake in line if (nums[i - 1] == nums[i]) c++;
 
+// 23 : 42 PM
+// 05 / 09 / 2023 / SUCCESS
+
 class Solution {
 public:
 	int removeDuplicates(std::vector<int>& nums) {

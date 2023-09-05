@@ -29,6 +29,9 @@
 // 12 : 05 PM / 17
 // 7 / 26 / 2023 / SUCCESS
 
+// 23 : 51 PM 
+// 05 / 09 / 2023 / THE failure!
+
 class Solution {
 public:
 	int strStr(std::string haystack, std::string needle) {
