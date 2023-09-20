@@ -32,6 +32,17 @@
 // 1 : 13 PM / 21
 // 7 / 26 / 2023 / SUCCESS
 // but i forgot nums[l] < target ? l + 1 : l;
+
+// 20 : 01 PM
+// 16 / 09 / 2023 / The failure
+
+// 20 : 20 PM
+// 16 / 09 / 2023 / SUCCESS
+// After a 20 minute
+
+// 12 : 48 PM
+// 20 / 09 / 2023 / SUCCESS
+
 class Solution {
 public:
 	int searchInseart(std::vector<int>& nums, int target) {
@@ -50,5 +61,19 @@ public:
 
 int main()
 {
+	//int a = 0, b = 0;
+	//for (int i = 0; i < 100; i++) {
+	//	int l = rand() % 10;
+	//	int r = rand() % 10 + 11;
+	//	a = l + (r - l) / 2;
+	//	std::cout << "l : " << l << " r : " << r << " res1 : " << a;
+	//	std::cout << std::endl;
+	//	b = (l + (r - l)) / 2;
+	//	std::cout << "l : " << l << " r : " << r << " res2 : " << b;
+	//	std::cout << std::endl;
+	//	if (a != b) {
+	//		std::cout << "FAIL" << std::endl;
+	//	}
+	//}
 	return 0;
 }
