@@ -11,10 +11,7 @@ public:
 		{
 			for (int j = 0; j < Bank[i].size(); j++)
 			{
-				if (Bank[i][j] == '1')
-				{
-					CurrSum++;
-				}
+				if (Bank[i][j] == '1') CurrSum++;
 			}
 			if (CurrSum > 0)
 			{
@@ -29,7 +26,7 @@ public:
 
 int main()
 {
-	std::vector<std::string> Test1 = { "011001","000000","010100","001000" };
+	std::vector<std::string> Test1 = {"011001","000000","010100","001000"};
 	Solution daps;
 	daps.numberOfBeams(Test1);
 	return 0;
