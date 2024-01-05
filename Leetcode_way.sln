@@ -157,6 +157,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Leetcode_485_TBS_mine", "Le
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Leetcode_1295_TBS_mine", "Leetcode_1295_TBS_mine\Leetcode_1295_TBS_mine.vcxproj", "{CFFEC1B1-9AD9-432F-A997-184B5D29D606}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Leetcode_300_TBS", "Leetcode_300_TBS\Leetcode_300_TBS.vcxproj", "{65F57256-CE4C-4876-B564-92F01DDEC1AE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -781,6 +783,14 @@ Global
 		{CFFEC1B1-9AD9-432F-A997-184B5D29D606}.Release|x64.Build.0 = Release|x64
 		{CFFEC1B1-9AD9-432F-A997-184B5D29D606}.Release|x86.ActiveCfg = Release|Win32
 		{CFFEC1B1-9AD9-432F-A997-184B5D29D606}.Release|x86.Build.0 = Release|Win32
+		{65F57256-CE4C-4876-B564-92F01DDEC1AE}.Debug|x64.ActiveCfg = Debug|x64
+		{65F57256-CE4C-4876-B564-92F01DDEC1AE}.Debug|x64.Build.0 = Debug|x64
+		{65F57256-CE4C-4876-B564-92F01DDEC1AE}.Debug|x86.ActiveCfg = Debug|Win32
+		{65F57256-CE4C-4876-B564-92F01DDEC1AE}.Debug|x86.Build.0 = Debug|Win32
+		{65F57256-CE4C-4876-B564-92F01DDEC1AE}.Release|x64.ActiveCfg = Release|x64
+		{65F57256-CE4C-4876-B564-92F01DDEC1AE}.Release|x64.Build.0 = Release|x64
+		{65F57256-CE4C-4876-B564-92F01DDEC1AE}.Release|x86.ActiveCfg = Release|Win32
+		{65F57256-CE4C-4876-B564-92F01DDEC1AE}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
