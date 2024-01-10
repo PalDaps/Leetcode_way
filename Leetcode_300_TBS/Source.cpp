@@ -3,7 +3,7 @@
 
 /*
 
-Сам решить не смог, поэтмоу обычной версии задания пока что нет. 
+Задание: есть массив различных чисел, нужно найти максимальную строго возрастающую попдпоследовательность.
 
 Решение:
 
@@ -40,6 +40,28 @@ public:
         return Result;
     }
 };
+
+// 17 : 52 PM / after a 4 days
+// 09 / 01 / 2024 / The FAIL!
+// Смог воспроизвести только после как повторил решение и посмотрел на код.
+
+class Solution
+{
+public:
+    int lengthofLIS(std::vector<int>& Nums)
+    {
+        std::vector<int> LengthsSubs(Nums.size(), 1);
+        int Result = 0;
+        for (int i = 0; i < Nums.size(); i++)
+        {
+            for (int j = 0; j < i; j++)
+                if (Nums[j] < Nums[i]) LengthsSubs[i] = std::max(LengthsSubs[i], LengthsSubs[j] + 1);
+            Result = std::max(Result, LengthsSubs[i]);
+        }
+        return Result;
+    }
+};
+
 
 int main()
 {

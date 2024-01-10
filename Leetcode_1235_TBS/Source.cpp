@@ -50,6 +50,35 @@ public:
     }
 };
 
+// 20 : 46 PM / after a 2 days
+// 09 / 01 / 2024 / FULL FAILURE!
+// Ничего не понимаю, я в тильте.
+
+class Solution
+{
+public:
+    int jobScheduling(std::vector<int> StartTime, std::vector<int> EndTime, std::vector<int> Profit)
+    {   
+        int Size = EndTime.size();
+        std::vector<std::vector<int>> Jobs;
+        for (int i = 0; i < Size; ++i)
+        {
+            Jobs.push_back({ EndTime[i], StartTime[i], Profit[i] });
+        }
+        std::sort(Jobs.begin(), Jobs.end());
+        std::map<int, int> Map = { {0, 0} };
+        for (auto& job : Jobs )
+        {
+            int Curr = std::prev(Map.upper_bound(job[1]))->second + job[2];
+            if (Curr > Map.rbegin()->second)
+            {
+                Map[job[0]] = Curr;
+            }
+        }
+        return Map.rbegin()->second;
+    }
+};
+
 int main()
 {
     std::vector<int> sTime1 = { 1,2,3,3 };
