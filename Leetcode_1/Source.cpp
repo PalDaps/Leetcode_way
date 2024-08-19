@@ -36,11 +36,13 @@ public:
 
 int main()
 {
+/*
 	int target = 6;
 	std::vector<int> anime = { -1,-2,-3,-4,-5 };
 	Solution daun;
 	std::vector<int> hi = daun.twoSum(anime, -8);
 	for (auto i : hi)
 		std::cout << i << " ";
+*/
 	return 0;
 }
