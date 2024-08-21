@@ -155,12 +155,16 @@ public:
 // 17 : 55 PM
 // 03 / 01 / 2024 / SUCCESS
 
+// 21:06 PM
+// 19 / 08 / 2024 / SUCCESS
+
 
 class Solution {
 public:
 	std::string mergeAlternately(std::string str1, std::string str2) {
 		int n = str1.size(), m = str2.size(), i = 0, j = 0;
 		std::string res = "";
+		res.substr();
 		while (i < n || j < m) {
 			if (i < n) res += str1[i++];
 			if (j < m) res += str2[j++];
