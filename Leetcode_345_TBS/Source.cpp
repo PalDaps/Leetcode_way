@@ -103,6 +103,7 @@
 // 15 : 02 PM
 // 01 / 09 / 2023 / SUCCESS
 
+/*
 class Solution {
 public:
 	std::string reverseVowels(std::string s) {
@@ -120,9 +121,46 @@ public:
 			c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U';
 	}
 };
+*/
+
+// 22 : 46 PM
+// 24 / 08 / 2024 / Failure
+
+class Solution
+{
+public:
+    std::string reverseVowels(std::string S)
+    {
+        int i = 0, j = S.size() - 1;
+        bool flag1 = false, flag2 = false;
+        while (i <= j)
+        {
+            while (!isChar(S[i])) { i++; }
+            while (!isChar(S[j])) { j--; }
+            if (isChar(S[i]) && isChar(S[j]))
+            {   
+                if (i >= j) return S;
+                std::swap(S[i], S[j]);
+                i++;
+                j--;
+            }
+        }
+        return S;
+    }
+
+    bool isChar(char C)
+    {
+        return C == 'a' || C == 'e' || C == 'i' || C == 'o' || C == 'u' ||
+            C == 'A' || C == 'E' || C == 'I' || C == 'O' || C == 'U';
+    }
+};
+
 
 
 
 int main() {
+    Solution Daps;
+    std::string Test1 = "hello";
+    Daps.reverseVowels(Test1);
 	return 0;
 }
