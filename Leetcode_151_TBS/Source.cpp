@@ -173,7 +173,10 @@
 // 23 : 21 PM
 // 27 / 08 / 2023 / SUCCESS
 
+// 0 : 51 PM
+// 25 / 08 / 2024 / SUCCESS
 
+/*
 class Solution {
 public:
     std::string reverseWords(std::string str) {
@@ -206,14 +209,71 @@ public:
         }
     }
 };
+*/
+
+
+// Идея перевернуть строку
+// Переворачивать слова в строке
+// Удалить пробелы в начале, в конце, в середине.
+// 
+
+
+/*
+class Solution {
+public:
+    std::string reverseWords(std::string S)
+    {
+        reverseString(S, 0, S.size());
+        std::string Result;
+        size_t i = 0, l = 0;
+        while (i < S.size())
+        {
+            while (S[l] != ' ' && l != S.size())
+            {
+                l++;
+            }
+            if (i < l && i < S.size())
+            {
+                reverseString(S, i, l);
+                size_t k = i;
+                while (k < l + 1 && k < S.size())
+                {
+                    Result.push_back(S[k]);
+                    k++;
+                }
+            }
+            l++;
+            i = l;
+        }
+        if (Result[Result.size() - 1] == ' ') Result.resize(Result.size() - 1);
+        return Result;
+    }
+
+    void reverseString(std::string& String, size_t Begin, size_t End)
+    {
+        size_t i = Begin, j = End - 1;
+        while (i < j)
+        {
+            if (i < j)
+            {
+                std::swap(String[i], String[j]);
+                i++;
+                j--;
+            }
+        }
+    }
+};
+*/
 
 
 int main() {
-    std::string test1 = " hello world ";
-    Solution daps;
-    std::cout << daps.reverseWords(test1);
+    std::vector<int> Anime();
+    // std::string test1 = "hello world";
+    // Solution daps;
+    // std::cout << daps.reverseWords(test1);
 	// std::cout << "HELLO!";
     // daps.reverseWordsWithMine(test1);
+  
 	return 0;
 }
 

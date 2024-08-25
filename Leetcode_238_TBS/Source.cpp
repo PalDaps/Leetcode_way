@@ -61,7 +61,7 @@
 // 23 : 34 PM
 // 27 / 08 / 2023 / SUCCESS
 
-
+/*
 class Solution {
 public:
     std::vector<int> productExceptSelf(std::vector<int> nums) {
@@ -75,6 +75,30 @@ public:
         return res;
     }
 };
+*/
+
+class Solution
+{
+public:
+    std::vector<int> productExceptSelf(std::vector<int>& Nums)
+    {
+        std::vector<int> Product(Nums.size(), 1);
+        for (size_t i = 1; i < Nums.size(); i++)
+        {
+            Product[i] = Product[i - 1] * Nums[i - 1];
+        }
+        for (int i = Nums.size() - 2, right = Nums[Nums.size() - 1]; i >= 0; --i)
+        {
+            Product[i] = Product[i] * right;
+            right *= Nums[i];
+        }
+
+        return Product;
+    }
+};
+
+// 17 : 11 PM
+// 25 / 08 / 2024 / SUCCESS
 
 
 int main() {
