@@ -1,5 +1,8 @@
 #include <iostream>
 #include <vector>
+/*
+Тут не идеи. Решение просто в лоб на основе тестов leetcode.
+*/
 
 class Solution {
 public:

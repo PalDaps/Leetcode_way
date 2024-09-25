@@ -2,6 +2,15 @@
 #include <vector>
 #include <string>
 
+/*
+Суть проблемы. Есть массив с последовательно повторяющимися символами. Нужно вернуть сжатый массив в виде:
+сначала повторяющийся символ, потом количество повоторяющихся символов в char типе. Двухзначные числа состоят из двух char
+символов.
+
+Идея: Идти по массиву, считать повторяющийся символ. И последовательно записывать символ и длину в новый массив. 
+Проблема с конвернтацией int в char. Например int = 43 нужно преобразовать в char[] Array = {'4', '3'};
+*/
+
 //class Solution {
 //public:
 //	int compress(std::vector<char>& chars) {
@@ -50,7 +59,7 @@
 // 23 : 41 PM
 // 27 / 08 / 2023 / SUCCESS
 
-
+/*
 class Solution {
 public:
 	int compress(std::vector<char>& chars) {
@@ -73,8 +82,46 @@ public:
 		return iRes;
 	}
 };
+*/
+
+
+class Solution {
+public:
+    int compress(std::vector<char>& Chars)
+    {
+        size_t Size = Chars.size(), WriteIndex = 0, LengthSequen = 0;
+        char Char = Chars[0];
+
+        for (size_t i = 0; i < Size; ++i)
+        {
+            if (Chars[i] != Char)
+            {
+                WriteInChars(Chars, Char, WriteIndex, LengthSequen);
+                Char = Chars[i];
+                LengthSequen = 1;
+            }
+            else LengthSequen++;
+        }
+        WriteInChars(Chars, Char, WriteIndex, LengthSequen);
+        return WriteIndex;
+    }
+    void WriteInChars(std::vector<char>& Array, char Symbol,
+        size_t& StartIndex, size_t Length)
+    {
+        Array[StartIndex++] = Symbol;
+        if (Length > 1)
+        {
+            std::string CounterString = std::to_string(Length);
+            size_t SizeString = CounterString.size();
+            for (size_t k = 0; k < SizeString; ++k)
+                Array[StartIndex++] = CounterString[k];
+        }
+    }
+};
  
 int main() {
-	std::cout << "HELLO, world!";
+    Solution Daps;
+    std::vector<char> Array = {'a', 'b', 'b', 'b', 'b', 'b', 'b' , 'b', 'b', 'b' , 'b', 'b', 'b' };
+    Daps.compress(Array);
 	return 100;
 }
