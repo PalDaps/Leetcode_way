@@ -1,6 +1,52 @@
 #include <iostream>
 #include <unordered_map>
 
+/*
+28.04.2025
+18:25
+Задача: дана строка с римским числом. Нужно вернуть значение, которое дает римская число-строка.
+Решение:
+Оказываетя это сработало. Я проверил такие тесты без отладки III, IV, MCMXCIV.
+Добавляем хэш мапу с значение и ключом чаром. Идем по строке. Ищем по чар ключу значение и добавляем его к сумме.
+Если следующее значение меньше или равно, то просто добавлем к сумме.
+А если просто больше. То из следующего значения вычитаем предыдущее и суммируем и нужно еще учесть, что на предыдущей итерации добавлялось значние,
+которое меньше. Следовательно его нужно вычесть второй раз.
+*/
+
+
+class Solution
+{
+public:
+	int romanToInt(std::string s)
+	{
+		std::unordered_map<char, int> Map = {{'I', 1}, 
+											{'V', 5}, 
+											{'X', 10}, 
+											{'L', 50}, 
+											{'C', 100}, 
+											{'D', 500}, 
+											{'M', 1000},};
+		int ResultSum = 0;
+		int Value = Map[s[0]];
+		// IV
+		for (size_t i = 0; i < s.size(); i++)
+		{
+			if (Map[s[i]] > Value)
+			{
+				int Delta = Map[s[i]] - 2 * Value;
+				ResultSum += Delta;
+			}
+			else
+			{
+				ResultSum += Map[s[i]];
+			}
+			Value = Map[s[i]];
+
+		}
+		return ResultSum;
+	}
+};
+
 //class Solution {
 //public:
 //	int romanToInt(std::string s) {
@@ -116,7 +162,10 @@
 // 15 : 30 PM
 // 03 / 09 / 2023 / SUCCESS
 
+// 18:24 PM
+// 28 / 04/ 2025 / SUCCESS
 
+/*
 class Solution {
 public: 
     int romanToInt(std::string s) {
@@ -136,6 +185,7 @@ public:
 		return sum;
     }
 };
+*/
 
 int main() {
 	Solution daps;
