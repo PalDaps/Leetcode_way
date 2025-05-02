@@ -1,6 +1,85 @@
 #include <iostream>
 #include <stack>
 
+/*
+20:56
+02.05.2025
+Задача: дается массив скобок. Нужно проверить, что соответсвует правилам. Вот таким правилам {([])}
+Идея: использовать стек. Идем по всему массиву. Если встречаем открытую скобку, то
+добавляют такую же закрывающую в стек. Как только находит закрывающую скобку, то она
+должна быть той закрывающей скобкой, которая лежит на топе стека.
+
+*/
+
+/*
+class Solution
+{
+public:
+    bool isValid(string s)
+    {
+        std::stack<char> Stack;
+        for(size_t i = 0; i < s.size(); i++)
+        {
+            char Bracket = s[i];
+            switch (Bracket)
+            {
+                case '(':
+                {
+                    Stack.push(')');
+                    break;
+                }
+                case '[':
+                {
+                    Stack.push(']');
+                    break;
+                }
+                case '{':
+                {
+                    Stack.push('}');
+                    break;
+                }
+                case ')':
+                {
+                    if (!Stack.empty())
+                    {
+                        if (Stack.top() == ')')
+                            Stack.pop();
+                        else return 0;
+                    }
+                    else return 0;
+                    break;
+                }
+                case ']':
+                {
+                    if (!Stack.empty())
+                    {
+                        if (Stack.top() == ']')
+                            Stack.pop();
+                        else return 0;
+                    }
+                    else return 0;
+                    break;
+                }
+                case '}':
+                {
+                    if (!Stack.empty())
+                    {
+                        if (Stack.top() == '}')
+                            Stack.pop();
+                        else return 0;
+                    }
+                    else return 0;
+                    break;
+                }
+            }
+
+        }
+        return Stack.empty();
+    }
+};
+
+*/
+
 
 // the nice solution i think
 //class Solution {
@@ -66,6 +145,9 @@
 
 // 19 : 46 PM
 // 04 / 09 / 2023 / SUCCESS
+
+// 21 : 04 PM
+// 02 / 05 / 2025 / SUCCESS
 
 
 
