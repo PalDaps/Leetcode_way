@@ -36,13 +36,12 @@ public:
             if (pIterator->val == val)
             {
                 pPrevNode->next = pNextNode;
-                pIterator = pNextNode;
             }
             else
             {
                 pPrevNode = pIterator;
-                pIterator = pNextNode;
             }
+            pIterator = pNextNode;
         }
         return pDummy->next;
     }
