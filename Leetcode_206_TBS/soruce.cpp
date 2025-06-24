@@ -6,11 +6,12 @@
 
 Задача: Дан связанный список, его нужно перевернуть.
 
-Идея:
+Идея: Переворачиваем указатели на следующие ноды, путем сохранения состояний с помощью pPrev, pNext. Итерируемся с помощью head.
 
-Решение: Есть два указателя. Один указывает на следущую ноду, другой на предыдущую и есть head. Смысл в том, чтобы равзернуть список.
-То есть запоминаем next. Говорим, что head next теперь  
+Решение: 
 
+P.S. 12:32 24.06.2025
+Далеко понял не с первого раза задачу. Сложная штука.
 
 */
 
@@ -19,4 +20,22 @@ struct ListNode
     int val;
     ListNode* next;
     ListNode(int x) : val(x), next(NULL) {}
+};
+
+class Solution
+{
+public:
+    ListNode* reverseList(ListNode* head)
+    {
+        ListNode* pPrev = nullptr;
+        ListNode* pNext = nullptr;
+        while (head)
+        {
+            pNext = head->next;
+            head->next = pPrev;
+            pPrev = head;
+            head = pNext;
+        }
+        return pPrev;
+    }
 };
