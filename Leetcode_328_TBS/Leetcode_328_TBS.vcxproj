@@ -21,10 +21,9 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{6d21d5b8-ef09-49c4-8242-03bb96041e3c}</ProjectGuid>
-    <RootNamespace>Leetcode328</RootNamespace>
+    <ProjectGuid>{634e1ea2-9857-40bd-a70d-a690d5372a30}</ProjectGuid>
+    <RootNamespace>Leetcode328TBS</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>Leetcode_328_TBS_mine</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
