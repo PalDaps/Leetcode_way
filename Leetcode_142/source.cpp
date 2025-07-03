@@ -1,6 +1,7 @@
 #include <iostream>
 
 /*
+
 18.06.2025
 10:48
 
@@ -23,8 +24,6 @@ P.S.
 
 P.S.
 Ушло примерно 4 часа времени на понимание данной задачи. Но внимание и концентранция, конечно, у меня ппц раздробленные.
-
-
 
 */
 
@@ -63,3 +62,13 @@ int main()
 {
 	return 0;
 }
+
+/*
+
+Notes of repeats
+
+// 03.07.2025 - Failure
+// 11:10      - I understood idea, but i couldnt proof this raiot x + y = n*C
+// P.S.       - Task +, Idea +, Solution -, Corner cases -
+
+*/

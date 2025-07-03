@@ -51,3 +51,16 @@ int main()
 {
 	return 0;
 }
+
+/*
+
+// Notes of repeats
+
+// 03.07.2025 : Success 
+// 9:48       : Done it problem for 3 minute, because i perfactly know the idea, but i feel like that i can forget some 
+// 				corner cases. And i dont understand how i can keep all corner cases in my head. But progress there 
+//				is here really
+// P.S.		  : Task +, Idea +, Solution +, Corner cases +-
+// P.S.       : Btw, i repeated this problem after 21 day and solved with success
+
+*/
