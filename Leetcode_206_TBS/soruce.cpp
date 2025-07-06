@@ -41,7 +41,7 @@ P.S. Все еще очень сложно понять рекурсию, не понимаю почему я не понимаю.
 
 */
 
-class Solution
+class SolutionRecursiveOne
 {
 public:
     ListNode* reverseList(ListNode* head)
@@ -86,7 +86,7 @@ public:
 
 */
 
-class Solution 
+class SolutionRecursiveTwo
 {
 public:
     ListNode* reverseList(ListNode* head, ListNode* pPrevNode = nullptr)
