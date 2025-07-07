@@ -148,4 +148,8 @@ Notes of repeats
                 to the head of the list in a chess-like arrangement.
 // P.S.       - Task +, Idea -+, Solution +, Corner cases -+
 
+// 07.07.2025 - Success
+// 13:05      - Two recusion methods was realised with success.
+// P.S.       - Task +, Idea +, Solution +, Corner cases +
+
 */
