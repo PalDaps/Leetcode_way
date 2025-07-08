@@ -8,14 +8,17 @@ public:
 		int temp_k = k;
 		for (int i = 0, curr_c = 0; i < nums.size(); i++) {
 			if (nums[i] == 1) curr_c++;
-			else if (temp_k > 0) {
+			else if (temp_k > 0) 
+			{
 				curr_c++;
 				temp_k--;
 			}
-			else if (temp_k == 0 && nums[i] != 0) {
+			else if (temp_k == 0 && nums[i] != 0) 
+			{
 				curr_c = k;
 			}
-			else if (temp_k == 0 && nums[i] == 0) {
+			else if (temp_k == 0 && nums[i] == 0) 
+			{
 				curr_c = k;
 			}
 			c = std::max(c, curr_c);
