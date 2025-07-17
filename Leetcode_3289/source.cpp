@@ -13,8 +13,9 @@
 
 */
 
-class Solution {
-public:
+class Solution 
+{
+   public:
     std::vector<int> getSneakyNumbers(std::vector<int>& nums)
     {
         std::unordered_map<int, int> Map;
