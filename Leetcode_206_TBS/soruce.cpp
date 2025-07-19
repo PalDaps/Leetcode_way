@@ -1,5 +1,12 @@
 #include <iostream>
 
+struct ListNode
+{
+    int val;
+    ListNode* next;
+    ListNode(int x) : val(x), next(NULL) {}
+};
+
 /*
 18.06.2025
 16:42
@@ -16,11 +23,21 @@ P.S. 12:32 24.06.2025
 
 */
 
-struct ListNode
+class SolutionRecursiveOne
 {
-    int val;
-    ListNode* next;
-    ListNode(int x) : val(x), next(NULL) {}
+public:
+    ListNode* reverseList(ListNode* head)
+    {
+        ListNode* pPrev = nullptr;
+        while (head)
+        {
+            ListNode* pNext = head->next;
+            head->next = pPrev;
+            pPrev = head;
+            head = pNext;
+        }
+        return pPrev;
+    }
 };
 
 /*
@@ -32,7 +49,8 @@ struct ListNode
 
 Идея: Использовать рекурсию
 
-Решение:
+Решение: Дойти рекурсивно до последней ноды и вернуть ее. Дальше начинаем свапать указатели с конца с помощью head.
+И всегда возвращаем новый head.
 
 P.S. Все еще очень сложно понять рекурсию, не понимаю почему я не понимаю.
 Максимально разобрал, но все еще чувствую, что в голове это штука не улажилась.
@@ -65,15 +83,21 @@ public:
         Вернули 4. Находимся в состояние, где head == 3.
 
         */
+        
         ListNode* Temp = reverseList(head->next);
+        
         /*
+        
         Тут, по идее, просто нужно свапнуть 3 и 4. И вернуть новую голову.
+        
         */
         head->next->next = head; // Теперь 4 указывает на 3
         head->next = nullptr; // 3 Указывает на nullptr
 
         /*
-        Теперь просто передаем бесконечно возвращаем новый указатель на список
+        
+        Теперь просто бесконечно возвращаем новый указатель на список
+        
         */
 
         return Temp;
@@ -81,6 +105,10 @@ public:
 };
 
 /*
+
+Идея: Использовать рекурсию
+
+Решение: Дойти рекурсивно до nullptr списка. Но возвращаем pPrevNode.
 
 Рекурсивный подход 2:
 
@@ -113,31 +141,10 @@ public:
     }
 };
 
-
-
-/*
-
-Итеративный подход:
-
-class Solution
+int main()
 {
-public:
-    ListNode* reverseList(ListNode* head)
-    {
-        ListNode* pPrev = nullptr;
-        ListNode* pNext = nullptr;
-        while (head)
-        {
-            pNext = head->next;
-            head->next = pPrev;
-            pPrev = head;
-            head = pNext;
-        }
-        return pPrev;
-    }
-};
-
-*/
+    return 0;
+}
 
 /*
 
@@ -151,5 +158,14 @@ Notes of repeats
 // 07.07.2025 - Success
 // 13:05      - Two recusion methods was realised with success.
 // P.S.       - Task +, Idea +, Solution +, Corner cases +
+
+// 19.07.2025 - Success 
+// 19:56      - Repeat iterative method
+// P.S.       - Task +, Idea +, Solution +, Corner cases +
+
+// 19.07.2025 - Fail
+// 19:56      - Recursives methods ideas i didnt remember. I think its because of this i dont fully understand
+                recusion
+// P.S.       - Task -, Idea -, Solution -, Corner cases -
 
 */
