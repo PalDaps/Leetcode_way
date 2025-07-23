@@ -1,3 +1,4 @@
+#include <iostream>
 
 /*
 
@@ -18,3 +19,8 @@ public:
         return n % 2 == 0 ? n : 2 * n;
     }
 };
+
+int main()
+{
+    return 0;
+}
