@@ -31,7 +31,7 @@ Mid == (3 - 0)/2 + 0 == 1
         Low >= High return;
     ָהול האכüרו mergeSort(nums, 1, 1);
         Low >= High return;
-    
+     
 */
 
 class SolutionMergeSort
