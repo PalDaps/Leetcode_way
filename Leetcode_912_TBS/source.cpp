@@ -31,7 +31,17 @@ Mid == (3 - 0)/2 + 0 == 1
         Low >= High return;
     Идем дальше mergeSort(nums, 1, 1);
         Low >= High return;
+
+
+P.S.
+25.07.2025
+10:54
+Я все еще не могу понять mergeSort! Как понять эту глубину рекурсии?!
      
+P.S.
+25.07.2025
+13:27
+Тяжко, долго и непонятно
 */
 
 class SolutionMergeSort
