@@ -63,4 +63,8 @@ int main()
 // P.S.		  : Task +, Idea +, Solution +, Corner cases +-
 // P.S.       : Btw, i repeated this problem after 21 day and solved with success
 
+// 26.07.2025 : Success
+// 17:44      : 
+// P.S.		  : Task +, Idea +, Solution +, Corner cases +-
+
 */

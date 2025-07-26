@@ -1,4 +1,4 @@
-#include <iostream>
+#include <iostream> 
 
 /*
 
@@ -24,6 +24,12 @@ P.S.
 
 P.S.
 Ушло примерно 4 часа времени на понимание данной задачи. Но внимание и концентранция, конечно, у меня ппц раздробленные.
+
+P.S.
+26.07.2025
+18:03
+Воу, ктса, с кайфом решил задачу. Но не понимаю все еще почему из x + y = n*C следует, что от pHead до 
+начала цикла такое же расстояние как от pMeeting до начала цикла?
 
 */
 
@@ -70,5 +76,9 @@ Notes of repeats
 // 03.07.2025 - Failure
 // 11:10      - I understood idea, but i couldnt proof this raiot x + y = n*C
 // P.S.       - Task +, Idea +, Solution -, Corner cases -
+
+// 26.07.2025 - Success
+// 18:05      - 
+// P.S.       - Task +, Idea +, Solution +, Corner cases +
 
 */
