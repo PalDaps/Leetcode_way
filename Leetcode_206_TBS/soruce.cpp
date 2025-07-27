@@ -168,4 +168,8 @@ Notes of repeats
                 recusion
 // P.S.       - Task -, Idea -, Solution -, Corner cases -
 
+// 27.07.2025 - Fail
+// 15:57      - Step by Step. Still my brain not Genadiy :)
+// P.S.       - Task +, Idea +, Solution +, Corner cases -
+
 */

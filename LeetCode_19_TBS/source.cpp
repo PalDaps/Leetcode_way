@@ -86,7 +86,8 @@ int main()
     ListNode* pOne = new ListNode(1, pTwo);
 
     SolutionRecursion Daps;
-    Daps.removeNthFromEnd(pOne, 2);
+    int N = 2;
+    Daps.removeNthFromEnd(pOne, N);
 
     delete pOne;
     delete pTwo;
@@ -96,3 +97,13 @@ int main()
 
     return 0;
 }
+
+/*
+
+Notes of repeats
+
+// 27.07.2025 - Failure
+// 15:45      - Repeat not recursive method
+// P.S.       - Task +, Idea +, Solution +, Corner cases +
+
+*/
