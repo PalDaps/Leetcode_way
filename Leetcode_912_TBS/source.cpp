@@ -86,3 +86,13 @@ int main()
     Merge.sortArray(Nums);
     return 0;
 }
+
+/*
+
+Notes of repeats
+
+// 31.07.2025 - Success
+// 22:10      - Merge sort. I feel progress.
+// P.S.       - Task +, Idea +, Solution +, Corner cases +
+
+*/
