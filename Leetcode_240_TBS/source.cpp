@@ -40,18 +40,37 @@ public:
 
 Рекурсивная версия
 
-01.08.2025
-10:27
+02.08.2025
+13:15
 
 Задача: Дана двумерная матрица, которая отсортирована по следующему приницпу: числа во всех строках возрастают.
 Числа во всех столбацах возратсают. Нужно найти в ней определенное число.
 
-Идея: Начать искать target с правого верхнего угла. Если текущее число в матрице меньше, чем target, то переходим на
-следующую строку, иначе уменьшаем столбец. Учесть частные случаи) size_t -> int.
+Идея: Рекурсия. Правильно обработать базовый случай. Когда закончились столбцы или закончились строки, возвращаем
+false.
 
 P.S. 10:23 Оч красивое решение.
 
 */
+
+class SolutionRecusion
+{
+public:
+    bool Recursion(std::vector<std::vector<int>>& matrix, int target, int i, int j)
+    {
+        size_t Rows = matrix.size();
+        if (j < 0 || i >= Rows) return false;
+
+        if (target == matrix[i][j]) return true;
+        else if (target > matrix[i][j]) return Recursion(matrix, target, i + 1, j);
+        else if (target < matrix[i][j]) return Recursion(matrix, target, i, j - 1);
+        return false;
+    }
+    bool searchMatrix(std::vector<std::vector<int>>& matrix, int target)
+    {
+        return Recursion(matrix, target, 0, matrix[0].size() - 1);
+    }
+};
 
 int main()
 {
