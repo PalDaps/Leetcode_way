@@ -17,6 +17,10 @@
 P.S. Совсем не понимаю как это работает, хочу побегать отлдачиком.
 P.S. Вообще не понимаю.
 P.S. Возможно этот алгоритм придумывается на двух нодах.
+P.S.
+16:30
+03.08.2025 
+Все еще не понимаю. Но уже чуть-чуть лучше. 
 
 */
 
@@ -70,3 +74,13 @@ int main()
     delete pFour;
     return 0;
 }
+
+/*
+
+// Notes of repeats
+
+// 03.08.2025  : Failure
+// 16:43       : head->next->next. Not understand deep recursion
+// P.S.		   : Task +, Idea -, Solution -, Corner cases +
+
+*/

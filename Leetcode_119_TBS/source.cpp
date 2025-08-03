@@ -33,3 +33,13 @@ public:
         return Current;
     }
 };
+
+/*
+
+Notes of repeats
+
+// 03.08.2025 - Failt
+// 17:03      - I still feel like I don't fully understand the depth of recursion
+// P.S.       - Task +, Idea -, Solution -, Corner cases -
+
+*/
