@@ -54,3 +54,13 @@ int main()
 
     return 0;
 }
+
+/*
+
+Notes of repeats
+
+// 04.08.2025 - Success
+// 14:40      - Not understand depth of recursion
+// P.S.       - Task +, Idea +, Solution +, Corner cases +
+
+*/
