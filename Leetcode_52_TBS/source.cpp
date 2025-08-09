@@ -96,4 +96,8 @@ public:
 // 19:42       : After two hours! Success! But not fully understand idea 
 // P.S.		   : Task +, Idea +/-, Solution +, Corner cases +
 
+// 09.08.2025  : Fail :)
+// 11:42       : 
+// P.S.		   : Task +, Idea +/-, Solution -, Corner cases -
+
 */

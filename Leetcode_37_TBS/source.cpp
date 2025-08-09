@@ -88,3 +88,13 @@ public:
         Solve(board, 0, 0);
     }
 };
+
+/*
+
+Notes of repeats
+
+// 09.08.2025 - Faile
+// 12:03      - Poor concentration, poor memory, clouded consciousness
+// P.S.       - Task +, Idea +/-, Solution -, Corner cases -
+
+*/
