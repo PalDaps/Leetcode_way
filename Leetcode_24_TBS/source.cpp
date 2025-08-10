@@ -83,4 +83,10 @@ int main()
 // 16:43       : head->next->next. Not understand deep recursion
 // P.S.		   : Task +, Idea -, Solution -, Corner cases +
 
+// 09.08.2025 - Success
+// 20:22      - Not understand depth of recursion
+// P.S.       - Task +, Idea +, Solution +, Corner cases +
+
 */
+
+
