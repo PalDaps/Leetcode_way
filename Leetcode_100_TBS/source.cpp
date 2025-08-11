@@ -35,3 +35,13 @@ public:
         return false;
     }
 };
+
+/*
+
+Notes of repeats
+
+// 11.08.2025 - Success
+// 21:22      - Not understand depth of recursion
+// P.S.       - Task +, Idea +, Solution +, Corner cases +
+
+*/
