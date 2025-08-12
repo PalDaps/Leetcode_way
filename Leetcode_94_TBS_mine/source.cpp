@@ -40,3 +40,13 @@ public:
         return Result;
     }
 };
+
+/*
+
+Notes of repeats
+
+// 12.08.2025 - Success
+// 21:22      - Dpeth of recusion is not my yet.
+// P.S.       - Task +, Idea +, Solution +, Corner cases +
+
+*/

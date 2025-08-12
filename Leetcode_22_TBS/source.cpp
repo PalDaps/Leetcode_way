@@ -116,3 +116,14 @@ public:
         return Result;
     }
 };
+
+
+/*
+
+Notes of repeats
+
+// 12.08.2025 - Fail
+// 21:22      - Step back, because i need chill
+// P.S.       - Task +, Idea +, Solution -, Corner cases +
+
+*/
