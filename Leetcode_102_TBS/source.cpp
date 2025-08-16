@@ -99,3 +99,13 @@ public:
         return Result;
     }
 };
+
+/*
+
+Notes of repeats
+
+// 16.08.2025 - Success
+// 20:48      - Two methods success.
+// P.S.       - Task +, Idea +, Solution +, Corner cases +
+
+*/
