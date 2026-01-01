@@ -1,7 +1,3 @@
-#include <iostream>
-#include <vector>
-#include <stack>
-
 /*
 
 29.08.2025
@@ -38,30 +34,3 @@ P.S. 22:39 Сложно.
 Еще важное уточнение, что все скайбоксы сортированы по non-decreasing order
 
 */
-
-class Solution 
-{
-public:
-    std::vector<std::vector<int>> getSkyline(std::vector<std::vector<int>>& buildings)
-    {
-        std::vector<std::vector<int>> Result;
-        if (buildings.size() == 0) return Result;
-        std::stack<int> MostRights;
-        for (int i = 0; i < buildings.size(); i++)
-        {
-            int Left = buildings[i][0];
-            int Right = buildings[i][1];
-            int Height = buildings[i][2];
-
-
-            int x = Left;
-            int y = Height;
-
-            MostRights.push(Right);
-            Result.push_back({ x, y });
-        }
-
-    }
-
-    return Result;
-};

@@ -45,6 +45,7 @@ public:
             Comb.pop_back();
         }
     }
+
     std::vector<std::string> letterCombinations(std::string digits)
     {
         std::vector<std::string> Result;
@@ -59,3 +60,14 @@ public:
         return Result;
     }
 };
+
+/*
+
+Notes of repeats
+
+// 01.01.2025 - Success
+// 17:59      - Only repeat
+// P.S.       - Task +, Idea -, Solution -, Corner cases -
+
+*/
+
