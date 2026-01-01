@@ -80,3 +80,13 @@ public:
         return Result;
     }
 };
+
+/*
+
+Notes of repeats
+
+// 01.01.2025 - Success
+// 21:40      - Repeat after 2 hours
+// P.S.       - Task +, Idea +, Solution +, Corner cases +
+
+*/
