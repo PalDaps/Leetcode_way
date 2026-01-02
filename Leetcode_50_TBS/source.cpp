@@ -1,4 +1,4 @@
-#include <iostream>
+ #include <iostream>
 
 /*
 
@@ -38,3 +38,13 @@ public:
         return x * myPow(x * x, n / 2);
     }
 };
+
+/*
+
+Notes of repeats
+
+// 02.01.2025 - Fail
+// 19:14      - Repeat after 5 month
+// P.S.       - Task +, Idea +, Solution +, Corner cases +
+
+*/
